@@ -95,3 +95,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+/* 
+DARK MODE HELP
+/* Apply the filter directly on the body tag
+body.dark-theme img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Or apply it via media query
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+} 
+s*/
