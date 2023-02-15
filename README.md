@@ -1,17 +1,14 @@
 # Ceres-Box-Website
 
-Actualmente estoy trabajando en este proyecto.
-Iré subiendo toda la información pertinente a su debido tiempo
+Este proyecto está en desarrollo, a continuación puede ver los pasos de su estado actual a continuación
 
-Probando la API de Canva para mostrar el borrador realizado en la app
-
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFae41XcOs&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFae41XcOs&#x2F;view?utm_content=DAFae41XcOs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Landing page Ceres Box</a> de Jaime Flores Luján
-
-https://www.canva.com/design/DAFae41XcOs/view
+## Pasos
+<ul>
+<li> [X] Crear la carpeta en local y vincular el repo a GitHub </li>
+<li> [X] Instalar las dependencias de Vite para desplegar posteriormente el proyecto </li>
+<li> [X] Hacer uso de las herramientas Prettier y ESLint para configurar los estandares de error y formateo </li>
+<li> [] Crear el borrador de la página web completa en Canva <a href="https://www.canva.com/design/DAFae41XcOs/view">link</a> </li>
+<li> [] Crear el esqueleto y maquetación de la landing page (Home y Tienda) puramente en HTML y CSS (proyecto-1-rockTheCode) </li>
+<li> [] Añadir funcionalidades con JavaScript (proyecto-2-rockTheCode) </li>
+<li> [] Desarrollar a futuro toda la página web completa como se ha previsto en Canva en React y en otro repositorio (proyecto-personal) </li>
+</ul>
