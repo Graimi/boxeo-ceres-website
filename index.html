@@ -9,6 +9,10 @@
     <meta name="description" content="Tienda Boxeo Website" />
     <meta name="referrer" content="unsafe-url" />
     <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="boxeo,kike de manuel,caceres,extremadura,españa,deporte,entrenar,edades,tienda, guantes"
+    />
     <!-- SPEED -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -23,31 +27,52 @@
       href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=Rubik:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="style" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="style" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <!-- TITLE -->
     <title>Ceres Box: Tienda Boxeo en Cáceres</title>
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo"></div>
-      <ul>
-        <li>
-          <a href="">Inicio</a>
-        </li>
-        <li>
-          <a href="">Tienda</a>
-        </li>
-        <li>
-          <a href="">Contacto</a>
-        </li>
-      </ul>
+    <!-- HEADER -->
+    <header class="bc__section__header">
+      <div class="bc__header__logo">BOXEO CERES</div>
+      <!--  NAVIGATOR -->
+      <nav class="bc__section__navbar">
+        <ul class="bc__navbar__header bc__layout__flex">
+          <li>
+            <a class="bc-navbar__inicio" href="#" role="link">Inicio</a>
+          </li>
+          <li>
+            <a class="bc__navbar__tienda" href="#" role="link">Tienda</a>
+          </li>
+          <li>
+            <a class="bc__navbar__contacto" href="#" role="link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      <!--  HAMBURGUER -->
+      <div class="hamburguer">
+        <label for=""></label>
+        <input type="checkbox" />
+      </div>
     </header>
-    <main>
+    <!-- MAIN -->
+    <main class="bc__section__main">
       <section class="hero"></section>
       <section>tienda?</section>
       <section>contacto</section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="bc__section__footer"></footer>
+
+    <!-- WHATSAPP BUTTON -->
+
+    <div class="bc__button--whatsApp">
+      <a
+        href="https://api.whatsapp.com/send?phone=34638560723&text=Hola!%20%C2%BFTienes%20alguna%20duda%20con%20los%20productos%3F"
+        target="_blank"
+        >
+        <img class="bc__whatsApp__img" src="./public/assets/whatsapp.png" alt="WP" />
+      </a>
+    </div>
   </body>
 </html>

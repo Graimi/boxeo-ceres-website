@@ -1,19 +1,140 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+:root {
+  /* COLOR PALETTE */
+  --bc__color__black: #191800;
+  --bc__color__yellow: #DBD748;
+  --bc__color__white: #FFFFFE;
+
+  /* BACKGROUND COLOR */
+  --bc__color__background: var(--bc__color__black);
+
+  /* TYPOGRAPHY */
+  --bc__typography__heading: 'Antonio', sans-serif;
+  --bc__typography__body: 'Rubik', sans-serif;
+
+  /* TYPOGRAPHY COLOR */
+  --bc__typography__heading--black: var(--bc__color__black);
+  --bc__typography__heading--yellow: var(--bc__color__yellow);
+  --bc__typography__heading--white: var(--bc__color__white);
+  --bc__typography__body--black: var(--bc__color__black);
+  --bc__typography__body--yellow: var(--bc__color__yellow);
+  --bc__typography__body--white: var(--bc__color__white);
+
+  /* GAP */
+  --bc-gap: 1.5rem;
+
   line-height: 1.5;
   font-weight: 400;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* GLOBAL STYLES */
 
-  font-synthesis: none;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  /* background-color: var(--bc__color__black); */
+  color: var(--bc__typography__body--white);
+  font-family: var(--bc__typography__body);
+  /* font-weight: 400; */
+  /* font-size: large; */
+
+  margin: 0 auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  color: var(--bc__typography__body--white);
+}
+
+/* LAYOUT */
+
+.bc__layout__flex {
+  display: flex;
+  align-items: center;
+}
+
+/* HEADER */
+
+/* .bc__header__logo {
+  cursor: pointer;
+} */
+
+.bc__section__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  min-height: 10vh;
+  padding: 1.5rem 0
+}
+
+.bc__navbar__header {
+  flex-direction: row;
+  gap: var(--bc-gap);
+}
+
+/* WHATSAPP BUTTON */
+
+.bc__button--whatsApp {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: rgb(37, 211, 102);
+  border-radius: 50%;
+  border: rgb(37, 211, 102);
+  box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
+  transition: box-shadow .2s;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  bottom: 3vh;
+  left: 3vh;
+  transition: all 0.2s;
+}
+
+.bc__button--whatsApp:hover {
+  transform: scale(1.1);
+}
+
+.bc__whatsApp__img {
+  position: absolute;
+  width: 70%;
+  top: 16%;
+  left: 20%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 48rem) {
+  /* MOBILE DISPLAY */
+  
+}
+
+@media screen and (min-width: 48rem) {
+  /* DESKTOP DISPLAY */
+  :root {
+  background-color: white;
+  }
+  .hamburguer {
+    display: none;
+  }
+
+}
+
+/* 
 a {
   font-weight: 500;
   color: #646cff;
