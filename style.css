@@ -19,11 +19,29 @@
   --bc__typography__body--yellow: var(--bc__color__yellow);
   --bc__typography__body--white: var(--bc__color__white);
 
-  /* GAP */
-  --bc-gap: 1.5rem;
+  /* FONT SIZE (Comprobar) */
+  --bc_typography--h1: 1.9rem;
+  --bc_typography--h2: 1.5rem;
+  --bc_typography--h3: 1.2rem;
+  --bc_typography--p: 0.8rem;
 
-  line-height: 1.5;
-  font-weight: 400;
+  /* LETTER SPACING */
+  --bc__typography__spacing--heading: 0.5rem;
+  --bc__typography__spacing--content: 0.2rem;
+
+  /* GAP */
+  --bc__gap: 1.5rem;
+
+  /* PADDING */
+  --bc__padding--section: 1.5rem 0;
+  --bc__padding--btn: 0.5rem 2rem;
+
+  /* BORDER */
+  --bc__border: 0.12rem solid var(--rc-color-n-050);
+
+  /* SIZING */
+  --bc__height--image: 18rem;
+  --bc__height--footer: 3rem;
 }
 
 /* GLOBAL STYLES */
@@ -43,7 +61,7 @@ html {
 }
 
 body {
-  /* background-color: var(--bc__color__black); */
+  background-color: var(--bc__color__black);
   color: var(--bc__typography__body--white);
   font-family: var(--bc__typography__body);
   /* font-weight: 400; */
@@ -84,7 +102,12 @@ a {
 
 .bc__navbar__header {
   flex-direction: row;
-  gap: var(--bc-gap);
+  gap: var(--bc__gap);
+}
+
+/* FOOTER */
+.bc__section__footer {
+  height: var(--footer__height);
 }
 
 /* WHATSAPP BUTTON */
@@ -100,7 +123,7 @@ a {
   cursor: pointer;
   overflow: hidden;
   position: fixed;
-  bottom: 3vh;
+  bottom: calc(3vh + var(--bc__height--footer));
   left: 3vh;
   transition: all 0.2s;
 }
