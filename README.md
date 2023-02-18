@@ -20,8 +20,10 @@ Este proyecto está en desarrollo, a continuación puede ver los pasos de su est
 [] link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? <br>
 [] link rel="canonical" href="#"> Establecer la URL cacnónica
 <li> [] HTML / body </li>
+[] Hacer un grid de los principales elementos (header, main y footer)
 [✅] Menú hamburguesa <br>
 [] Añadir logo <br>
+[✅] Contact - Añadir enlace whatsapp y borde
 [✅] Añadir botón whatsApp <br>
 <li> [] Añadir funcionalidades con JavaScript (proyecto-2-rockTheCode) </li>
 [] Crear invisible nav - Notion/CSS3/DISEÑOS/Invisible nav <br>
