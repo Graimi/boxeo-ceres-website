@@ -35,42 +35,39 @@
   <body>
     <!-- HEADER -->
     <header class="bc__section__header">
-      <div class="bc__header__logo">BOXEO CERES</div>
-      <!--  NAVIGATOR -->
-      <nav class="bc__section__navbar">
-        <ul class="bc__navbar__header bc__layout__flex">
-          <li>
-            <a class="bc-navbar__inicio" href="#" role="link">Inicio</a>
-          </li>
-          <li>
-            <a class="bc__navbar__tienda" href="#" role="link">Tienda</a>
-          </li>
-          <li>
-            <a class="bc__navbar__contacto" href="#" role="link">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-      <!--  HAMBURGUER -->
-      <div class="hamburguer">
-        <label for=""></label>
-        <input type="checkbox" />
+      <div class="bc__section__header__layout bc__layout__flex">
+        <div class="bc__header__logo">BOXEO CERES</div>
+        <!--  HAMBURGUER -->
+        <label class="bc__hamburguer__label" for="hamburger">&#9776;</label>
+        <input type="checkbox" name="bc__hamburguer" class="bc__hamburguer" id="hamburger" />
+        <!--  NAVIGATOR -->
+        <nav class="bc__section__navbar">
+          <ul class="bc__navbar__header bc__layout__flex">
+            <li>
+              <a class="bc__navbar__inicio" href="#" role="link">Inicio</a>
+            </li>
+            <li>
+              <a class="bc__navbar__tienda" href="#" role="link">Tienda</a>
+            </li>
+            <li>
+              <a class="bc__navbar__contacto" href="#" role="link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <!-- MAIN -->
     <main class="bc__section__main">
-      <section class="bc__main__hero""></section>
-      <section>tienda?</section>
+      <section>hero</section>
+      <section>tienda</section>
       <section>contacto</section>
     </main>
-    <!-- <footer class="bc__section__footer">Probando ando</footer> -->
-
     <!-- WHATSAPP BUTTON -->
-
     <div class="bc__button--whatsApp">
       <a
         href="https://api.whatsapp.com/send?phone=34638560723&text=Hola!%20%C2%BFTienes%20alguna%20duda%20con%20los%20productos%3F"
         target="_blank"
-        >
+      >
         <img class="bc__whatsApp__img" src="./public/assets/whatsapp.png" alt="WP" />
       </a>
     </div>

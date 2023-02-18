@@ -1,8 +1,8 @@
 :root {
   /* COLOR PALETTE */
   --bc__color__black: #191800;
-  --bc__color__yellow: #DBD748;
-  --bc__color__white: #FFFFFE;
+  --bc__color__yellow: #dbd748;
+  --bc__color__white: #fffffe;
 
   /* BACKGROUND COLOR */
   --bc__color__background: var(--bc__color__black);
@@ -45,7 +45,6 @@
 }
 
 /* GLOBAL STYLES */
-
 html {
   box-sizing: border-box;
 }
@@ -64,6 +63,8 @@ body {
   background-color: var(--bc__color__black);
   color: var(--bc__typography__body--white);
   font-family: var(--bc__typography__body);
+  min-width: 20rem;
+  min-height: 100vh;
   /* font-weight: 400; */
   /* font-size: large; */
 
@@ -79,30 +80,31 @@ a {
 }
 
 /* LAYOUT */
-
 .bc__layout__flex {
   display: flex;
   align-items: center;
 }
 
 /* HEADER */
-
-/* .bc__header__logo {
-  cursor: pointer;
-} */
-
-.bc__section__header {
+.bc__section__header__layout {
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-transform: uppercase;
   min-height: 10vh;
-  padding: 1.5rem 0
+  padding: 1.5rem 0;
 }
 
 .bc__navbar__header {
   flex-direction: row;
   gap: var(--bc__gap);
+}
+
+/* QUITAMOS LOS ICONOS DE LA HAMBURGUESA 
+ESTAMOS EN DESKTOP FIRST */
+.bc__hamburguer__label,
+.bc__hamburguer {
+  display: none;
 }
 
 /* FOOTER */
@@ -111,7 +113,6 @@ a {
 }
 
 /* WHATSAPP BUTTON */
-
 .bc__button--whatsApp {
   width: 3.2rem;
   height: 3.2rem;
@@ -119,7 +120,7 @@ a {
   border-radius: 50%;
   border: rgb(37, 211, 102);
   box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
-  transition: box-shadow .2s;
+  transition: box-shadow 0.2s;
   cursor: pointer;
   overflow: hidden;
   position: fixed;
@@ -140,22 +141,79 @@ a {
 }
 
 /* MEDIA QUERIES */
-
-@media screen and (max-width: 48rem) {
-  /* MOBILE DISPLAY */
+/* MOBILE DISPLAY */
+@media screen and (max-width: 23.5rem) {
   
-}
-
-@media screen and (min-width: 48rem) {
-  /* DESKTOP DISPLAY */
-  :root {
-  background-color: white;
+  .bc__section__header__layout {
+    flex-direction: column;
   }
-  .hamburguer {
+
+  .bc__hamburguer__label {
+    display: inline-block;
+    padding: var(--bc__padding--section);
+  }
+
+  /* POR DEFECTO NAV NONE */
+  .bc__section__navbar {
     display: none;
   }
 
+  /* CHECKED -> APARECE NAV */
+  .bc__hamburguer:checked ~ .bc__section__navbar {
+    display: block;
+    padding: var(--bc__padding--section);
+  }
+
+  /* COLUMN NAV ITEMS */
+  .bc__navbar__header {
+    flex-direction: column;
+  }
 }
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+
+  .bc__section__header__layout {
+    display: block;
+  }
+
+  .bc__header__logo {
+    left: 300rem;
+    margin-left: 3rem;
+  }
+
+  .bc__hamburguer__label {
+    display: block;
+    position: absolute;
+    top: 1.35rem;
+    right: 3.5rem;
+  }
+
+  /* POR DEFECTO NAV NONE */
+  .bc__section__navbar {
+    display: none;
+  }
+
+  /* CHECKED -> APARECE NAV */
+  .bc__hamburguer:checked + .bc__section__navbar {
+    display: block;
+    padding: var(--bc__padding--section);
+  }
+
+  /* COLUMN NAV ITEMS */
+  .bc__navbar__header {
+    flex-direction: column;
+  }
+}
+/* DESKTOP DISPLAY
+@media screen and (min-width: 48rem) {
+  :root {
+    background-color: white;
+  }
+  /* .hamburguer {
+    display: none;
+  } 
+}*/
 
 /* 
 a {
