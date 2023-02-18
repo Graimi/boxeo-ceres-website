@@ -31,8 +31,10 @@
 
   /* GAP */
   --bc__gap: 1.5rem;
+  --bc__gap--small: 0.7rem;
 
   /* PADDING */
+  --bc__padding--small: 0.5rem;
   --bc__padding--section: 1.5rem 0;
   --bc__padding--btn: 0.5rem 2rem;
 
@@ -41,7 +43,9 @@
 
   /* SIZING */
   --bc__height--image: 18rem;
-  --bc__height--footer: 3rem;
+  --bc__height--header: 12vh;
+  --bc__height--main: 65vh;
+  --bc__height--footer: 23vh;
 }
 
 /* GLOBAL STYLES */
@@ -60,7 +64,6 @@ html {
 }
 
 body {
-  background-color: var(--bc__color__black);
   color: var(--bc__typography__body--white);
   font-family: var(--bc__typography__body);
   min-width: 20rem;
@@ -90,7 +93,8 @@ a {
   justify-content: space-around;
   align-items: center;
   text-transform: uppercase;
-  min-height: 10vh;
+  background-color: var(--bc__color__black);
+  min-height: var(--bc__height--header);
   padding: 1.5rem 0;
   font-size: var(--bc_typography--h3);
 }
@@ -100,8 +104,6 @@ a {
   color: transparent;
   filter: drop-shadow(0 0 0.5rem var(--bc__color__yellow))
 }
-
-
 
 .bc__navbar__header {
   flex-direction: row;
@@ -131,9 +133,7 @@ ESTAMOS EN DESKTOP FIRST */
 
 /* button styling */
 .bc__contact__button {
-
   font-size: var(--bc_typography--h3);
-  
   position: relative;
   text-transform: uppercase;
   /* text-decoration: none; */
@@ -152,7 +152,7 @@ ESTAMOS EN DESKTOP FIRST */
   color: transparent;
   width: 0%;
   inset: 0;
-  border-right: 0.2rem solid var(--bc__color__yellow);
+  border-right: 0.2rem double var(--bc__color__yellow);
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
@@ -169,16 +169,70 @@ ESTAMOS EN DESKTOP FIRST */
   color: transparent;
 }
 
+/* MAIN */
+.bc__section__main {
+  min-height: var(--bc__height--main);
+  background-color: var(--bc__color__white);
+  color: var(--bc__color__black);
+}
 
 /* FOOTER */
 .bc__section__footer {
-  height: var(--footer__height);
+  min-height: var(--bc__height--footer);
+  font-size: var(--bc_typography--p);
+  color: var(--bc__color__yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  background-image: url(./public/assets/footer.png);
+  background-size: cover;
+  background-position-x:center;
+  padding: var(--bc__padding--section);
+  gap: var(--bc__gap--small)
 }
+
+.bc__footer__web {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  gap: var(--bc__gap--small);
+}
+
+.bc__footer__location,
+.bc__contact__phone,
+.bc__contact__instagram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--bc__gap--small);
+}
+
+.bc__location__address {
+  text-align: right;
+}
+
+.bc__location__slogan {
+  text-align: center;
+}
+
+.bc__contact__phone,
+.bc__contact__instagram,
+.bc__social__linkedin,
+.bc__social__github {
+  padding: var(--bc__padding--small);
+}
+
+
 
 /* WHATSAPP BUTTON */
 .bc__button--whatsApp {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: rgb(37, 211, 102);
   border-radius: 50%;
   border: rgb(37, 211, 102);
@@ -187,7 +241,7 @@ ESTAMOS EN DESKTOP FIRST */
   cursor: pointer;
   overflow: hidden;
   position: fixed;
-  bottom: calc(3vh + var(--bc__height--footer));
+  bottom: calc(var(--bc__height--footer));
   left: 3vh;
   transition: all 0.2s;
 }
