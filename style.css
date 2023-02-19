@@ -1,33 +1,41 @@
 :root {
   /* COLOR PALETTE */
-  --bc__color__black: #191800;
-  --bc__color__yellow: #dbd748;
-  --bc__color__white: #fffffe;
+  --bc__color--black: #191800;
+  --bc__color--yellow: #dbd748;
+  --bc__color--white: #fffffe;
 
   /* BACKGROUND COLOR */
-  --bc__color__background: var(--bc__color__black);
+  --bc__color--background: var(--bc__color--black);
 
   /* TYPOGRAPHY */
-  --bc__typography__heading: 'Antonio', sans-serif;
-  --bc__typography__body: 'Rubik', sans-serif;
+  --bc__typography--heading: 'Antonio', sans-serif;
+  --bc__typography--body: 'Rubik', sans-serif;
 
   /* TYPOGRAPHY COLOR */
-  --bc__typography__heading--black: var(--bc__color__black);
-  --bc__typography__heading--yellow: var(--bc__color__yellow);
-  --bc__typography__heading--white: var(--bc__color__white);
-  --bc__typography__body--black: var(--bc__color__black);
-  --bc__typography__body--yellow: var(--bc__color__yellow);
-  --bc__typography__body--white: var(--bc__color__white);
+  --bc__typography--heading--black: var(--bc__color--black);
+  --bc__typography--heading--yellow: var(--bc__color--yellow);
+  --bc__typography--heading--white: var(--bc__color--white);
+  --bc__typography--body--black: var(--bc__color--black);
+  --bc__typography--body--yellow: var(--bc__color--yellow);
+  --bc__typography--body--white: var(--bc__color--white);
 
   /* FONT SIZE (Comprobar) */
-  --bc_typography--h1: 1.9rem;
-  --bc_typography--h2: 1.5rem;
-  --bc_typography--h3: 1.2rem;
-  --bc_typography--p: 0.8rem;
+  --bc__typography--h1: 1.9rem;
+  --bc__typography--h2: 1.5rem;
+  --bc__typography--h3: 1.2rem;
+  --bc__typography--p: 0.8rem;
+
+  /* FONT WEIGHT (Comprobar) */
+  --bc__weight--300: 300;
+  --bc__weight--500: 500;
+  --bc__weight--700: 700;
 
   /* LETTER SPACING */
-  --bc__typography__spacing--heading: 0.5rem;
-  --bc__typography__spacing--content: 0.2rem;
+  --bc__typography--spacing--heading: 0.5rem;
+  --bc__typography--spacing--content: 0.2rem;
+
+  /* MARGIN */
+  --bc__margin--small: 0.5rem;
 
   /* GAP */
   --bc__gap: 1.5rem;
@@ -36,10 +44,11 @@
   /* PADDING */
   --bc__padding--small: 0.5rem;
   --bc__padding--section: 1.5rem 0;
-  --bc__padding--btn: 0.5rem 2rem;
+  --bc__padding--btn: 1rem;
 
   /* BORDER */
-  --bc__border: 0.12rem solid var(--rc-color-n-050);
+  --bc__border--yellow: 0.12rem solid var(--bc__color--yellow);
+  --bc__border--black: 0.12rem solid var(--bc__color--black);
 
   /* SIZING */
   --bc__height--image: 18rem;
@@ -64,11 +73,10 @@ html {
 }
 
 body {
-  color: var(--bc__typography__body--white);
-  font-family: var(--bc__typography__body);
+  color: var(--bc__typography--body--white);
+  font-family: var(--bc__typography--body);
   min-width: 20rem;
   min-height: 100vh;
-  /* font-weight: 400; */
   /* font-size: large; */
   margin: 0 auto;
   text-rendering: optimizeLegibility;
@@ -78,7 +86,7 @@ body {
 }
 
 a {
-  color: var(--bc__typography__body--white);
+  color: var(--bc__typography--body--white);
 }
 
 /* LAYOUT */
@@ -93,16 +101,17 @@ a {
   justify-content: space-around;
   align-items: center;
   text-transform: uppercase;
-  background-color: var(--bc__color__black);
+  background-color: var(--bc__color--black);
   min-height: var(--bc__height--header);
-  padding: 1.5rem 0;
-  font-size: var(--bc_typography--h3);
+  padding: var(--bc__padding--section);
+  font-size: var(--bc__typography--h3);
+  font-weight: var(--bc__weight--500);
 }
 
 .bc__header__logo {
-  -webkit-text-stroke: 0.04rem var(--bc__color__white);
+  -webkit-text-stroke: 0.04rem var(--bc__color--white);
   color: transparent;
-  filter: drop-shadow(0 0 0.5rem var(--bc__color__yellow))
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
 }
 
 .bc__navbar__header {
@@ -118,7 +127,7 @@ ESTAMOS EN DESKTOP FIRST */
 }
 
 .bc__navbar__contacto {
-  border:#fffffe solid 1 auto;
+  border: #fffffe solid 1 auto;
   border-radius: 1rem;
 }
 
@@ -133,15 +142,14 @@ ESTAMOS EN DESKTOP FIRST */
 
 /* button styling */
 .bc__contact__button {
-  font-size: var(--bc_typography--h3);
+  font-size: var(--bc__typography--h3);
   position: relative;
   text-transform: uppercase;
   /* text-decoration: none; */
-  
 }
 
 .bc__contact__text--plain {
-  color: var(--bc__color__white);
+  color: var(--bc__color--white);
 }
 
 /* this is the text, when you hover on button */
@@ -152,11 +160,11 @@ ESTAMOS EN DESKTOP FIRST */
   color: transparent;
   width: 0%;
   inset: 0;
-  border-right: 0.2rem double var(--bc__color__yellow);
+  border-right: 0.2rem double var(--bc__color--yellow);
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
-  -webkit-text-stroke: 0.04rem var(--bc__color__white);
+  -webkit-text-stroke: 0.04rem var(--bc__color--white);
 }
 
 /* Para mover la raya */
@@ -172,15 +180,16 @@ ESTAMOS EN DESKTOP FIRST */
 /* MAIN */
 .bc__section__main {
   min-height: var(--bc__height--main);
-  background-color: var(--bc__color__white);
-  color: var(--bc__color__black);
+  background-color: var(--bc__color--white);
+  color: var(--bc__color--black);
 }
 
 /* FOOTER */
 .bc__section__footer {
   min-height: var(--bc__height--footer);
-  font-size: var(--bc_typography--p);
-  color: var(--bc__color__yellow);
+  font-size: var(--bc__typography--p);
+  font-weight: var(--bc__weight--300);
+  color: var(--bc__color--yellow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,9 +197,9 @@ ESTAMOS EN DESKTOP FIRST */
   align-items: center;
   background-image: url(./public/assets/footer.png);
   background-size: cover;
-  background-position-x:center;
+  background-position-x: center;
   padding: var(--bc__padding--section);
-  gap: var(--bc__gap--small)
+  gap: var(--bc__gap--small);
 }
 
 .bc__footer__web {
@@ -201,7 +210,7 @@ ESTAMOS EN DESKTOP FIRST */
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 0.3rem;
   gap: var(--bc__gap--small);
-  border-bottom: var(--bc__color__yellow) 0.1rem solid;
+  border-bottom: var(--bc__color--yellow) 0.1rem solid;
 }
 
 .bc__footer__location,
@@ -223,14 +232,14 @@ ESTAMOS EN DESKTOP FIRST */
 
 .bc__slogan__boxer {
   text-align: center;
-  font-size: var(--bc_typography--h3);
-  -webkit-text-stroke: 0.04rem var(--bc__color__yellow);
+  font-size: var(--bc__typography--h3);
+  -webkit-text-stroke: 0.04rem var(--bc__color--yellow);
   color: transparent;
 }
 
 .bc__slogan__text {
-  background-color: var(--bc__color__yellow);
-  color: var(--bc__color__black);
+  background-color: var(--bc__color--yellow);
+  color: var(--bc__color--black);
   padding: var(--bc__padding--small);
   border-radius: 0.5rem;
   text-align: center;
@@ -242,8 +251,6 @@ ESTAMOS EN DESKTOP FIRST */
 .bc__social__github {
   padding: var(--bc__padding--small);
 }
-
-
 
 /* WHATSAPP BUTTON */
 .bc__button--whatsApp {
@@ -276,14 +283,13 @@ ESTAMOS EN DESKTOP FIRST */
 /* MEDIA QUERIES */
 /* MOBILE DISPLAY */
 @media screen and (max-width: 23.5rem) {
-  
   .bc__section__header__layout {
     flex-direction: column;
+    gap: var(--bc__gap);
   }
 
   .bc__hamburguer__label {
     display: inline-block;
-    padding: var(--bc__padding--section);
   }
 
   /* POR DEFECTO NAV NONE */
@@ -294,25 +300,59 @@ ESTAMOS EN DESKTOP FIRST */
   /* CHECKED -> APARECE NAV */
   .bc__hamburguer:checked ~ .bc__section__navbar {
     display: block;
-    padding: var(--bc__padding--section);
   }
 
   /* COLUMN NAV ITEMS */
   .bc__navbar__header {
     flex-direction: column;
   }
+
+  /* FOOTER */
+  .bc__footer__web {
+    margin: var(--bc__margin--small);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bc__footer__location {
+    flex-direction: column-reverse;
+    text-align: center;
+    order: 1;
+    margin-top: var(--bc__margin--small);
+  }
+
+  .bc__location__address {
+    text-align: center;
+  }
+
+  .bc__footer__slogan {
+    order: 0;
+  }
+
+  .bc__footer__contact {
+    order: 2;
+  }
+
+  .bc__contact__phone,
+  .bc__contact__instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--bc__margin--small);
+  }
 }
 
 /* TABLET DISPLAY */
 @media screen and (min-width: 23.5rem) and (max-width: 48rem) {
-
   .bc__section__header__layout {
     display: block;
   }
 
   .bc__header__logo {
-    left: 300rem;
-    margin-left: 3rem;
+    /* left: 300rem;
+    margin-left: 3rem; */
+    margin: auto;
+    text-align: center;
   }
 
   .bc__hamburguer__label {
@@ -337,111 +377,42 @@ ESTAMOS EN DESKTOP FIRST */
   .bc__navbar__header {
     flex-direction: column;
   }
-}
-/* DESKTOP DISPLAY
-@media screen and (min-width: 48rem) {
-  :root {
-    background-color: white;
+
+  /* FOOTER */
+  .bc__footer__web {
+    margin: var(--bc__margin--small);
+    display: flex;
+    flex-direction: column;
   }
-  /* .hamburguer {
-    display: none;
-  } 
-}*/
 
-/* 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  .bc__footer__location {
+    flex-direction: column-reverse;
+    text-align: center;
+    order: 1;
+    margin-top: var(--bc__margin--small);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 
-/* 
-DARK MODE HELP
-/* Apply the filter directly on the body tag
-body.dark-theme img {
-  filter: brightness(0.8) contrast(1.2);
+  .bc__footer__contact {
+    display: flex;
+  }
+
+  .bc__location__address {
+    text-align: center;
+  }
+
+  .bc__footer__slogan {
+    order: 0;
+  }
+
+  .bc__footer__contact {
+    order: 2;
+  }
+
+  .bc__contact__phone,
+  .bc__contact__instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--bc__margin--small);
+  }
 }
-
-/* Or apply it via media query
-@media (prefers-color-scheme: dark) {
-  img {
-    filter: brightness(0.8) contrast(1.2);
-  }
-} 
-s*/
