@@ -199,8 +199,9 @@ ESTAMOS EN DESKTOP FIRST */
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 5px;
+  grid-column-gap: 0.3rem;
   gap: var(--bc__gap--small);
+  border-bottom: var(--bc__color__yellow) 0.1rem solid;
 }
 
 .bc__footer__location,
@@ -217,6 +218,21 @@ ESTAMOS EN DESKTOP FIRST */
 }
 
 .bc__location__slogan {
+  text-align: center;
+}
+
+.bc__slogan__boxer {
+  text-align: center;
+  font-size: var(--bc_typography--h3);
+  -webkit-text-stroke: 0.04rem var(--bc__color__yellow);
+  color: transparent;
+}
+
+.bc__slogan__text {
+  background-color: var(--bc__color__yellow);
+  color: var(--bc__color__black);
+  padding: var(--bc__padding--small);
+  border-radius: 0.5rem;
   text-align: center;
 }
 
