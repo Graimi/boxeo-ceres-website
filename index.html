@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="Ceres Box" content="Made with HTML & CSS" />
     <meta name="author" content="Jaime Flores Luján" />
-    <meta name="description" content="Tienda Boxeo Website" />
+    <meta name="description" content="Tienda Boxeo Cáceres Website" />
     <meta name="referrer" content="unsafe-url" />
     <meta name="robots" content="index, follow" />
     <meta
@@ -34,7 +34,7 @@
     <link rel="preload" as="style" href="style.css" />
     <link rel="stylesheet" href="style.css" />
     <!-- TITLE -->
-    <title>Ceres Box: Tienda Boxeo en Cáceres</title>
+    <title>Ceres Box: Tu tienda de Boxeo en Cáceres</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -51,7 +51,7 @@
               <a class="bc__navbar__inicio" href="#hero" role="link">Inicio</a>
             </li>
             <li>
-              <a class="bc__navbar__tienda" href="#shop" role="link">Tienda</a>
+              <a class="bc__navbar__shop" href="#shop" role="link">Tienda</a>
             </li>
             <li>
               <a
@@ -76,14 +76,37 @@
     <main class="bc__section__main">
       <!-- HERO -->
       <section id="hero" class="bc__section__hero">
-        <img class="bc__hero__logo" src="./public/assets/logo.png" alt="logo">
-        <h1 class="bc__hero__description">SÉ TU MEJOR <br> VERSIÓN</h1>
+        <img class="bc__hero__logo" src="./public/assets/logo.png" alt="logo" />
+        <h1 class="bc__hero__description">
+          SÉ TU MEJOR <br />
+          VERSIÓN
+        </h1>
         <a href="#shop"><h3 class="bc__hero__CTA">DESCUBRE NUESTRA GAMA</h3></a>
         <a href="#shop"
           ><img class="bc__hero__next" src="./public/assets/avance.png" alt="next"
         /></a>
       </section>
-      <section id="shop">tienda</section>
+      <!-- SHOP -->
+      <section id="shop" class="bc__section__shop bc__layout__grid">
+        <div class="bc__product--1"></div>
+        <div class="bc__product--card">
+          <div class="bc__card--details">
+            <h2 class="bc__card--title">OLD SCHOOL</h2>
+            <img
+              class="bc__product--image"
+              src="./public/assets/gloves_old_school.png"
+              alt="Old School Gloves"
+            />
+            <div class="bc__card--body">
+              <h3>50€</h3>
+              <h3>10oz</h3>
+            </div>
+          </div>
+          <button class="bc__card--button">
+            <img class="bc__card--button__image" src="./public/assets/carrito.png" alt="Carrito" />
+          </button>
+        </div>
+      </section>
     </main>
     <!-- WHATSAPP BUTTON -->
     <div class="bc__button--whatsApp">
