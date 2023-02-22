@@ -2,7 +2,8 @@
   /* COLOR PALETTE */
   --bc__color--black: #191800;
   --bc__color--yellow: #dbd748;
-  --bc__color--white: #fffffe;
+  --bc__color--white: #f2f2f2;
+  --bc__color--white--light: #fffffe;
 
   /* BACKGROUND COLOR */
   --bc__color--background: var(--bc__color--black);
@@ -56,7 +57,7 @@
   --bc__height--header: 12vh;
   --bc__height--hero: 88vh;
   --bc__height--shop: 65vh;
-  --bc__height--main: var(--bc__height--hero) + var(--bc__height--shop)
+  --bc__height--main: var(--bc__height--hero) + var(--bc__height--shop);
   --bc__height--footer: 23vh;
 }
 
@@ -201,6 +202,8 @@ ESTAMOS EN DESKTOP FIRST */
   background-size: cover;
   min-height: var(--bc__height--hero);
   padding: var(--bc__padding--big);
+  position: relative;
+  z-index: 1;
 }
 
 .bc__hero__logo {
@@ -247,6 +250,7 @@ ESTAMOS EN DESKTOP FIRST */
   background-position-x: center;
   padding: var(--bc__padding--section);
   gap: var(--bc__gap--small);
+  background-color: var(--bc__color--white);
 }
 
 /* diseños info shop */
@@ -313,11 +317,11 @@ ESTAMOS EN DESKTOP FIRST */
   box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
   transition: box-shadow 0.2s;
   cursor: pointer;
-  overflow: hidden;
   position: fixed;
-  bottom: calc(var(--bc__height--footer));
+  bottom: 3vh;
   left: 3vh;
   transition: all 0.2s;
+  z-index: 0;
 }
 
 /* efecto hover */
