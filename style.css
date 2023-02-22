@@ -20,7 +20,7 @@
   --bc__typography--body--white: var(--bc__color--white);
 
   /* FONT SIZE (Comprobar) */
-  --bc__typography--h1: 1.9rem;
+  --bc__typography--h1: 2rem;
   --bc__typography--h2: 1.5rem;
   --bc__typography--h3: 1.2rem;
   --bc__typography--p: 0.8rem;
@@ -43,8 +43,9 @@
 
   /* PADDING */
   --bc__padding--small: 0.5rem;
-  --bc__padding--section: 1.5rem 0;
   --bc__padding--btn: 1rem;
+  --bc__padding--section: 1.5rem 0;
+  --bc__padding--big: 2rem;
 
   /* BORDER */
   --bc__border--yellow: 0.12rem solid var(--bc__color--yellow);
@@ -53,7 +54,9 @@
   /* SIZING */
   --bc__height--image: 18rem;
   --bc__height--header: 12vh;
-  --bc__height--main: 65vh;
+  --bc__height--hero: 88vh;
+  --bc__height--shop: 65vh;
+  --bc__height--main: var(--bc__height--hero) + var(--bc__height--shop)
   --bc__height--footer: 23vh;
 }
 
@@ -111,12 +114,14 @@ a {
 .bc__header__logo {
   -webkit-text-stroke: 0.04rem var(--bc__color--white);
   color: transparent;
-  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
+  /* filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow)); */
+  z-index: 2;
 }
 
 .bc__navbar__header {
   flex-direction: row;
   gap: var(--bc__gap);
+  z-index: 2;
 }
 
 /* QUITAMOS LOS ICONOS DE LA HAMBURGUESA 
@@ -179,12 +184,54 @@ ESTAMOS EN DESKTOP FIRST */
 
 /* MAIN */
 .bc__section__main {
-  min-height: var(--bc__height--main);
+  min-height: var(--bc__height--main) ;
   background-color: var(--bc__color--white);
   color: var(--bc__color--black);
 }
 
+/* HERO */
+/* diseños generales */
+.bc__section__hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(./public/assets/ring.jpg);
+  background-size: cover;
+  min-height: var(--bc__height--hero);
+  padding: var(--bc__padding--big);
+}
+
+.bc__hero__logo {
+  width: 10rem;
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
+}
+
+.bc__hero__description {
+ -webkit-text-stroke: 0.04rem var(--bc__color--white);
+  color: var(--bc__color--white);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
+  font-size: 5rem;
+  font-weight: var(--bc__weight--500);
+}
+
+.bc__hero__CTA {
+  background-color: var(--bc__color--yellow);
+  color: var(--bc__color--black);
+  padding: var(--bc__padding--btn);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: var(--bc__typography--h3);
+}
+
+.bc__hero__next {
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
+  width: 3rem;
+}
+
 /* FOOTER */
+/* diseños generales */
 .bc__section__footer {
   min-height: var(--bc__height--footer);
   font-size: var(--bc__typography--p);
@@ -202,6 +249,7 @@ ESTAMOS EN DESKTOP FIRST */
   gap: var(--bc__gap--small);
 }
 
+/* diseños info shop */
 .bc__footer__web {
   display: grid;
   justify-content: center;
@@ -213,6 +261,7 @@ ESTAMOS EN DESKTOP FIRST */
   border-bottom: var(--bc__color--yellow) 0.1rem solid;
 }
 
+/* diseños individuales grupo dirección, teléfono e instagram */
 .bc__footer__location,
 .bc__contact__phone,
 .bc__contact__instagram {
@@ -222,14 +271,12 @@ ESTAMOS EN DESKTOP FIRST */
   gap: var(--bc__gap--small);
 }
 
+/* orden texto dirección */
 .bc__location__address {
   text-align: right;
 }
 
-.bc__location__slogan {
-  text-align: center;
-}
-
+/* diseño especial texto Kike de Manuel */
 .bc__slogan__boxer {
   text-align: center;
   font-size: var(--bc__typography--h3);
@@ -237,6 +284,7 @@ ESTAMOS EN DESKTOP FIRST */
   color: transparent;
 }
 
+/* diseño texto del eslogan */
 .bc__slogan__text {
   background-color: var(--bc__color--yellow);
   color: var(--bc__color--black);
@@ -245,7 +293,9 @@ ESTAMOS EN DESKTOP FIRST */
   text-align: center;
 }
 
+/* padding a las imágenes del footer */
 .bc__contact__phone,
+.bc__footer__location,
 .bc__contact__instagram,
 .bc__social__linkedin,
 .bc__social__github {
@@ -253,6 +303,7 @@ ESTAMOS EN DESKTOP FIRST */
 }
 
 /* WHATSAPP BUTTON */
+/* diseños generales */
 .bc__button--whatsApp {
   width: 2.5rem;
   height: 2.5rem;
@@ -269,10 +320,12 @@ ESTAMOS EN DESKTOP FIRST */
   transition: all 0.2s;
 }
 
+/* efecto hover */
 .bc__button--whatsApp:hover {
   transform: scale(1.1);
 }
 
+/* imagen de WhatsApp */
 .bc__whatsApp__img {
   position: absolute;
   width: 70%;
@@ -305,6 +358,30 @@ ESTAMOS EN DESKTOP FIRST */
   /* COLUMN NAV ITEMS */
   .bc__navbar__header {
     flex-direction: column;
+  }
+
+  /* MAIN */
+  
+  /* HERO */
+  /* reducir tamaño logo */
+  .bc__hero__logo {
+    width: 7rem;
+  }
+  
+    /* reducir tamaño texto */
+  .bc__hero__description {
+    font-size: 3rem;
+    font-weight: var(--bc__weight--500);
+  }
+
+  /* reducir tamaño CTA */
+  .bc__hero__CTA {
+    font-size: var(--bc__typography--p);
+  }
+
+  /* reducir tamaño next */
+  .bc__hero__next {
+    width: 2rem;
   }
 
   /* FOOTER */
@@ -346,11 +423,10 @@ ESTAMOS EN DESKTOP FIRST */
 @media screen and (min-width: 23.5rem) and (max-width: 48rem) {
   .bc__section__header__layout {
     display: block;
+    min-height: 5vh;
   }
 
   .bc__header__logo {
-    /* left: 300rem;
-    margin-left: 3rem; */
     margin: auto;
     text-align: center;
   }
@@ -376,6 +452,29 @@ ESTAMOS EN DESKTOP FIRST */
   /* COLUMN NAV ITEMS */
   .bc__navbar__header {
     flex-direction: column;
+  }
+
+  /* MAIN */
+  
+  /* HERO */
+  /* aumentar tamaño hero para compensar el header */
+  .bc__section__hero {
+    min-height: 91vh;
+  }
+
+  /* reducir tamaño logo */
+  .bc__hero__logo {
+    width: 8rem;
+  }
+  
+    /* reducir tamaño texto */
+  .bc__hero__description {
+    font-size: 4rem;
+    font-weight: var(--bc__weight--500);
+  }
+
+  .bc__hero__next {
+    width: 2.5rem;
   }
 
   /* FOOTER */
