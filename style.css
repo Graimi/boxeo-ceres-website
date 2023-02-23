@@ -1,31 +1,37 @@
 :root {
   /* COLOR PALETTE */
+  --bc__color--transparent: transparent;
   --bc__color--black: #191800;
   --bc__color--yellow: #dbd748;
   --bc__color--white: #f2f2f2;
   --bc__color--white--light: #fffffe;
   --bc__color--grey: #c3c6ce;
   --bc__color--grey--dark: #6e6e73;
+  --bc__color--green: #25d366;
 
   /* TYPOGRAPHY FAMILY*/
   --bc__typography--family--heading: 'Antonio', sans-serif;
   --bc__typography--family--body: 'Rubik', sans-serif;
 
-  /* FONT SIZE (Comprobar) */
+  /* FONT SIZE */
   --bc__typography--size--p: 0.8rem;
   --bc__typography--size--h3: 1.2rem;
   --bc__typography--size--h2: 1.5rem;
   --bc__typography--size--h1: 2rem;
   --bc__typography--size--extra: 5rem;
 
-  /* FONT WEIGHT (Comprobar) */
+  /* FONT WEIGHT*/
   --bc__typography--weight--300: 300;
   --bc__typography--weight--500: 500;
   --bc__typography--weight--700: 700;
 
   /* LETTER SPACING */
-  --bc__typography--spacing--heading: 0.5rem;
-  --bc__typography--spacing--content: 0.2rem;
+  --bc__typography--spacing--content: 0.05rem;  
+
+/* GENERAL SIZING */
+--bc__empty: 0%;
+--bc__half: 50%;
+--bc__complete: 100%;
 
   /* MARGIN */
   --bc__margin--small: 0.5rem;
@@ -47,22 +53,25 @@
   --bc__border--black: 0.12rem solid var(--bc__color--black);
   --bc__border--grey: 0.12rem solid var(--bc__color--grey);
 
-  /* SIZING */
-  --bc__height--image: 18rem;
-  --bc__height--header: 12vh;
-  --bc__height--hero: 88vh;
-  --bc__height--shop: 100vh;
+  /* HEIGHT */
+  --bc__height--small: 2.5rem;
   --bc__height--card: 18rem;
-  --bc__height--main: var(--bc__height--hero) + var(--bc__height--shop);
+  --bc__height--header: 12vh;
   --bc__height--footer: 23vh;
+  --bc__height--hero: 88vh;
+  --bc__height--full--screen: 100vh;
+
+  /* WIDTH */
+  --bc__width--small: 2.5rem;
 }
 
 /* 
 🟥 - Falta código
 🟨 - Revisar descripciones y variables
-🟦 - Código hecho y revisado
+✅ - Código hecho y revisado
 */
 /* --🟨 GLOBAL STYLES------------------------------------------------------------------------ */
+/* Se establecen los diferentes estilos generales normalmente predefinidos y comunes */
 html {
   box-sizing: border-box;
 }
@@ -75,18 +84,20 @@ html {
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+  letter-spacing: var(--bc__typography--spacing--content);
 }
 
 body {
   color: var(--bc__color--white);
   font-family: var(--bc__typography--family--body);
+  /* ver que hacer con este width */
   min-width: 20rem;
-  min-height: 100vh;
+  min-height: var(--bc__height--full--screen);
   margin: 0 auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: var(--bc__complete);
 }
 
 a {
@@ -94,6 +105,7 @@ a {
 }
 
 /* LAYOUT */
+/* Se dejan predefinidos los siguientes apartados para evitar repetirlos */
 .bc__layout__flex {
   display: flex;
   align-items: center;
@@ -105,39 +117,37 @@ a {
 }
 
 /* --🟨 HEADER------------------------------------------------------------------------ */
+/* Diseños específicos del header */
 .bc__section__header__layout {
-  display: flex;
   justify-content: space-around;
-  align-items: center;
   text-transform: uppercase;
   background-color: var(--bc__color--black);
   min-height: var(--bc__height--header);
   padding: var(--bc__padding--section);
   font-size: var(--bc__typography--size--h3);
   font-weight: var(--bc__typography--weight--500);
-  font-style: normal;
+  word-spacing: var(--bc__typography--spacing--content);
 }
 
+/* Diseños para poner el nombre del logo hueco */
 .bc__header__logo {
   -webkit-text-stroke: 0.04rem var(--bc__color--white);
-  color: transparent;
-  /* filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow)); */
-  z-index: 2;
+  color: var(--bc__color--transparent);
 }
 
+/* Diseños para la navbar en desktop */
 .bc__navbar__header {
   flex-direction: row;
   gap: var(--bc__gap);
-  z-index: 2;
 }
 
-/* QUITAMOS LOS ICONOS DE LA HAMBURGUESA 
-ESTAMOS EN DESKTOP FIRST */
+/* Diseño para quitar la hamburguesa, estamos en desktop first */
 .bc__hamburguer__label,
 .bc__hamburguer {
   display: none;
 }
 
+/* Diseños específicos para el efecto de la palabra Contacto */
 .bc__navbar__contacto {
   border: #fffffe solid 1 auto;
   border-radius: 1rem;
@@ -147,7 +157,7 @@ ESTAMOS EN DESKTOP FIRST */
 /* === removing default button style ===*/
 .bc__contact__button {
   margin: 0;
-  background: transparent;
+  background: var(--bc__color--transparent);
   padding: 0;
   border: none;
 }
@@ -169,8 +179,8 @@ ESTAMOS EN DESKTOP FIRST */
   position: absolute;
   box-sizing: border-box;
   content: attr(data-text);
-  color: transparent;
-  width: 0%;
+  color: var(--bc__color--transparent);
+  width: var(--bc__empty);
   inset: 0;
   border-right: 0.2rem double var(--bc__color--yellow);
   overflow: hidden;
@@ -181,29 +191,25 @@ ESTAMOS EN DESKTOP FIRST */
 
 /* Para mover la raya */
 .bc__contact__button:hover .bc__contact__text--hover {
-  width: 100%;
+  width: var(--bc__complete);
 }
 
 /* Para no superponer el color de la primera palabra */
 .bc__contact__button:hover .bc__contact__text--plain {
-  color: transparent;
+  color: var(--bc__color--transparent);
 }
 
 /* --🟨 MAIN------------------------------------------------------------------------ */
-
+/* Se establece el color de fondo del main */
 .bc__section__main {
-  min-height: var(--bc__height--main);
   background-color: var(--bc__color--white);
-  color: var(--bc__color--black);
 }
 
 /* 🟨 HERO */
-/* diseños generales */
+/* Diseños generales */
 .bc__section__hero {
-  display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
   justify-content: space-evenly;
   background-image: url(./public/assets/ring.jpg);
   background-size: cover;
@@ -233,20 +239,25 @@ ESTAMOS EN DESKTOP FIRST */
   border-radius: 0.5rem;
   text-align: center;
   font-size: var(--bc__typography--size--h3);
+  word-spacing: var(--bc__typography--spacing--content);
 }
 
 .bc__hero__next {
   filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
-  width: 3rem;
+  width: var(--bc__width--small);
 }
 
 /* 🟨SHOP */
 .bc__section__shop {
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  min-height: var(--bc__height--shop);
+  min-height: var(--bc__height--full--screen);
   padding: var(--bc__padding--shop);
-  gap: var(--bc__gap);
+  gap: var(--bc__gap--big);
+}
+
+.bc__product {
+  flex-basis: 26%;
 }
 
 .bc__product--card {
@@ -255,14 +266,14 @@ ESTAMOS EN DESKTOP FIRST */
   border-radius: 20px;
   background: var(--bc__color--white--light);
   position: relative;
-  padding: 1.8rem;
+  padding: 1.5rem;
   transition: 0.5s ease-out;
   overflow: visible;
 }
 
 .bc__card--details {
   color: var(--bc__color--black);
-  height: 100%;
+  height: var(--bc__complete);
   gap: 0.5em;
   display: grid;
   place-content: center;
@@ -289,7 +300,6 @@ ESTAMOS EN DESKTOP FIRST */
 }
 
 .bc__card--body {
-  display: flex;
   justify-content: space-between;
   font-size: var(--bc__typography--size--h2);
   font-weight: var(--bc__typography--weight--300);
@@ -297,36 +307,34 @@ ESTAMOS EN DESKTOP FIRST */
   color: var(--bc__color--grey--dark);
 }
 
-
-
 .bc__card--button {
   transform: translate(-50%, 125%);
-  width: 40%;
+  width: 30%;
   border-radius: 1rem;
   border: none;
   background-color: var(--bc__color--yellow);
   color: #fff;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   position: absolute;
-  left: 50%;
+  left: var(--bc__half);
   bottom: 0;
   opacity: 0;
   transition: 0.3s ease-out;
 }
 
 .bc__card--button__image {
-  width: 2rem;
+  width: var(--bc__width--small);
 }
 
 /*Hover*/
 .bc__product--card:hover {
-  border-color: var(--bc__color--yellow);
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  border: 0.1rem solid var(--bc__color--yellow);
+  box-shadow: 0 0.25rem 1.1rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .bc__product--card:hover .bc__card--button {
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, var(--bc__half));
   opacity: 1;
 }
 
@@ -338,11 +346,9 @@ ESTAMOS EN DESKTOP FIRST */
   font-size: var(--bc__typography--size--p);
   font-weight: var(--bc__typography--weight--300);
   color: var(--bc__color--yellow);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  align-items: center;
   background-image: url(./public/assets/footer.png);
   background-size: cover;
   background-position-x: center;
@@ -367,9 +373,7 @@ ESTAMOS EN DESKTOP FIRST */
 .bc__footer__location,
 .bc__contact__phone,
 .bc__contact__instagram {
-  display: flex;
   flex-direction: row;
-  align-items: center;
   gap: var(--bc__gap--small);
 }
 
@@ -383,7 +387,7 @@ ESTAMOS EN DESKTOP FIRST */
   text-align: center;
   font-size: var(--bc__typography--size--h3);
   -webkit-text-stroke: 0.04rem var(--bc__color--yellow);
-  color: transparent;
+  color: var(--bc__color--transparent);
 }
 
 /* diseño texto del eslogan */
@@ -408,11 +412,10 @@ ESTAMOS EN DESKTOP FIRST */
 
 /* diseños generales */
 .bc__button--whatsApp {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: rgb(37, 211, 102);
-  border-radius: 50%;
-  border: rgb(37, 211, 102);
+  height: var(--bc__height--small);
+  width: var(--bc__width--small);
+  background-color: var(--bc__color--green);
+  border-radius: var(--bc__half);
   box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
   transition: box-shadow 0.2s;
   cursor: pointer;
@@ -420,7 +423,6 @@ ESTAMOS EN DESKTOP FIRST */
   bottom: 3vh;
   left: 3vh;
   transition: all 0.2s;
-  z-index: 0;
 }
 
 /* efecto hover */
@@ -485,7 +487,7 @@ ESTAMOS EN DESKTOP FIRST */
 
   /* reducir tamaño next */
   .bc__hero__next {
-    width: 2rem;
+    width: calc(var(--bc__width--small) - 0.5rem);
   }
 
   /* FOOTER */
@@ -516,9 +518,7 @@ ESTAMOS EN DESKTOP FIRST */
 
   .bc__contact__phone,
   .bc__contact__instagram {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     margin: var(--bc__margin--small);
   }
 }
@@ -582,8 +582,9 @@ ESTAMOS EN DESKTOP FIRST */
     font-size: calc(var(--bc__typography--size--h3) - 0.24rem);
   }
 
+    /* reducir tamaño icono next */
   .bc__hero__next {
-    width: 2.5rem;
+    width: calc(var(--bc__width--small) - 0.25rem);
   }
 
   /* FOOTER */
@@ -618,9 +619,7 @@ ESTAMOS EN DESKTOP FIRST */
 
   .bc__contact__phone,
   .bc__contact__instagram {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     margin: var(--bc__margin--small);
   }
 }
