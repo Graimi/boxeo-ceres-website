@@ -11,20 +11,24 @@ Este proyecto está en desarrollo, a continuación puede ver los pasos de su est
 <li> [] Crear el borrador de la página web completa en Canva <a href="https://www.canva.com/design/DAFae41XcOs/view">link</a> </li>
 <li> [] Crear el esqueleto y maquetación de la landing page de una tienda de boxeo (Home y Tienda) puramente en HTML y CSS (proyecto-1-rockTheCode) </li>
 <li> [] ¿Subir las imágenes a cloudinary? </li>
-<li> [] CSS </li>
+<li> [] CSS general </li>
 [✅] Setear todas las variables y propiedades <br>
 [✅] Estilos navbar en todas las medias queries <br>
+[] Quitar efecto hover al botón de contacto en tablet y móvil <br>
+[] Poner botón de compra fijo en las cards <br>
 <li> [] HTML / head </li>
 [] Desarrollar el head para favorecer la carga óptima de la página <br>
 [] meta name="referrer" content="unsafe-url"> ¿es correcto unsafe-url? <br>
 [] link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? <br>
 [] link rel="canonical" href="#"> Establecer la URL cacnónica
-<li> [] HTML / body </li>
-[] Hacer un grid de los principales elementos (header, main y footer)
+<li> [] HTML & CSS / body </li>
 [✅] Menú hamburguesa <br>
-[] Añadir logo <br>
+[] Añadir logo original <br>
 [✅] Contact - Añadir enlace whatsapp y borde
 [✅] Añadir botón whatsApp <br>
+[✅] Crear hero <br>
+[] Crear shop <br>
+[✅] Crear footer <br>
 <li> [] Añadir funcionalidades con JavaScript (proyecto-2-rockTheCode) </li>
 [] Crear invisible nav - Notion/CSS3/DISEÑOS/Invisible nav <br>
 [] Añadir botón whats oficial <!--<g clip-path="url(#_clipPath_A3g8G5hPEGG2L0B6hFCxamU4cc8rfqzQ)">" -->

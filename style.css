@@ -4,32 +4,24 @@
   --bc__color--yellow: #dbd748;
   --bc__color--white: #f2f2f2;
   --bc__color--white--light: #fffffe;
+  --bc__color--grey: #c3c6ce;
+  --bc__color--grey--dark: #6e6e73;
 
-  /* BACKGROUND COLOR */
-  --bc__color--background: var(--bc__color--black);
-
-  /* TYPOGRAPHY */
-  --bc__typography--heading: 'Antonio', sans-serif;
-  --bc__typography--body: 'Rubik', sans-serif;
-
-  /* TYPOGRAPHY COLOR */
-  --bc__typography--heading--black: var(--bc__color--black);
-  --bc__typography--heading--yellow: var(--bc__color--yellow);
-  --bc__typography--heading--white: var(--bc__color--white);
-  --bc__typography--body--black: var(--bc__color--black);
-  --bc__typography--body--yellow: var(--bc__color--yellow);
-  --bc__typography--body--white: var(--bc__color--white);
+  /* TYPOGRAPHY FAMILY*/
+  --bc__typography--family--heading: 'Antonio', sans-serif;
+  --bc__typography--family--body: 'Rubik', sans-serif;
 
   /* FONT SIZE (Comprobar) */
-  --bc__typography--h1: 2rem;
-  --bc__typography--h2: 1.5rem;
-  --bc__typography--h3: 1.2rem;
-  --bc__typography--p: 0.8rem;
+  --bc__typography--size--p: 0.8rem;
+  --bc__typography--size--h3: 1.2rem;
+  --bc__typography--size--h2: 1.5rem;
+  --bc__typography--size--h1: 2rem;
+  --bc__typography--size--extra: 5rem;
 
   /* FONT WEIGHT (Comprobar) */
-  --bc__weight--300: 300;
-  --bc__weight--500: 500;
-  --bc__weight--700: 700;
+  --bc__typography--weight--300: 300;
+  --bc__typography--weight--500: 500;
+  --bc__typography--weight--700: 700;
 
   /* LETTER SPACING */
   --bc__typography--spacing--heading: 0.5rem;
@@ -39,8 +31,9 @@
   --bc__margin--small: 0.5rem;
 
   /* GAP */
-  --bc__gap: 1.5rem;
   --bc__gap--small: 0.7rem;
+  --bc__gap: 1.5rem;
+  --bc__gap--big: 3rem;
 
   /* PADDING */
   --bc__padding--small: 0.5rem;
@@ -52,6 +45,7 @@
   /* BORDER */
   --bc__border--yellow: 0.12rem solid var(--bc__color--yellow);
   --bc__border--black: 0.12rem solid var(--bc__color--black);
+  --bc__border--grey: 0.12rem solid var(--bc__color--grey);
 
   /* SIZING */
   --bc__height--image: 18rem;
@@ -63,7 +57,12 @@
   --bc__height--footer: 23vh;
 }
 
-/* GLOBAL STYLES */
+/* 
+🟥 - Falta código
+🟨 - Revisar descripciones y variables
+🟦 - Código hecho y revisado
+*/
+/* --🟨 GLOBAL STYLES------------------------------------------------------------------------ */
 html {
   box-sizing: border-box;
 }
@@ -79,11 +78,10 @@ html {
 }
 
 body {
-  color: var(--bc__typography--body--white);
-  font-family: var(--bc__typography--body);
+  color: var(--bc__color--white);
+  font-family: var(--bc__typography--family--body);
   min-width: 20rem;
   min-height: 100vh;
-  /* font-size: large; */
   margin: 0 auto;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -92,7 +90,7 @@ body {
 }
 
 a {
-  color: var(--bc__typography--body--white);
+  color: var(--bc__color--white);
 }
 
 /* LAYOUT */
@@ -101,7 +99,12 @@ a {
   align-items: center;
 }
 
-/* HEADER */
+.bc__layout__grid {
+  display: grid;
+  align-items: center;
+}
+
+/* --🟨 HEADER------------------------------------------------------------------------ */
 .bc__section__header__layout {
   display: flex;
   justify-content: space-around;
@@ -110,8 +113,9 @@ a {
   background-color: var(--bc__color--black);
   min-height: var(--bc__height--header);
   padding: var(--bc__padding--section);
-  font-size: var(--bc__typography--h3);
-  font-weight: var(--bc__weight--500);
+  font-size: var(--bc__typography--size--h3);
+  font-weight: var(--bc__typography--weight--500);
+  font-style: normal;
 }
 
 .bc__header__logo {
@@ -150,7 +154,7 @@ ESTAMOS EN DESKTOP FIRST */
 
 /* button styling */
 .bc__contact__button {
-  font-size: var(--bc__typography--h3);
+  font-size: var(--bc__typography--size--h3);
   position: relative;
   text-transform: uppercase;
   /* text-decoration: none; */
@@ -185,14 +189,15 @@ ESTAMOS EN DESKTOP FIRST */
   color: transparent;
 }
 
-/* MAIN */
+/* --🟨 MAIN------------------------------------------------------------------------ */
+
 .bc__section__main {
   min-height: var(--bc__height--main);
   background-color: var(--bc__color--white);
   color: var(--bc__color--black);
 }
 
-/* HERO */
+/* 🟨 HERO */
 /* diseños generales */
 .bc__section__hero {
   display: flex;
@@ -217,8 +222,8 @@ ESTAMOS EN DESKTOP FIRST */
   -webkit-text-stroke: 0.04rem var(--bc__color--white);
   color: var(--bc__color--white);
   filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
-  font-size: 5rem;
-  font-weight: var(--bc__weight--500);
+  font-size: var(--bc__typography--size--extra);
+  font-weight: var(--bc__typography--weight--500);
 }
 
 .bc__hero__CTA {
@@ -227,7 +232,7 @@ ESTAMOS EN DESKTOP FIRST */
   padding: var(--bc__padding--btn);
   border-radius: 0.5rem;
   text-align: center;
-  font-size: var(--bc__typography--h3);
+  font-size: var(--bc__typography--size--h3);
 }
 
 .bc__hero__next {
@@ -235,20 +240,22 @@ ESTAMOS EN DESKTOP FIRST */
   width: 3rem;
 }
 
-/* SHOP */
+/* 🟨SHOP */
 .bc__section__shop {
+  justify-content: space-around;
+  flex-wrap: wrap;
   min-height: var(--bc__height--shop);
   padding: var(--bc__padding--shop);
+  gap: var(--bc__gap);
 }
 
 .bc__product--card {
   width: var(--bc__height--card);
-  height: 254px;
+  height: 33rem;
   border-radius: 20px;
   background: var(--bc__color--white--light);
   position: relative;
   padding: 1.8rem;
-  border: 2px solid #c3c6ce;
   transition: 0.5s ease-out;
   overflow: visible;
 }
@@ -259,21 +266,38 @@ ESTAMOS EN DESKTOP FIRST */
   gap: 0.5em;
   display: grid;
   place-content: center;
+  align-content: space-between;
 }
 
 /*Text*/
 .bc__card--title {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: var(--bc__typography--size--h1);
+  font-weight: var(--bc__typography--weight--700);
+  font-family: var(--bc__typography--family--heading);
+  -webkit-text-stroke: 0.045rem var(--bc__color--black);
+  font-style: italic;
+  color: var(--bc__color--yellow);
 }
 
-.bc__card--body {
-  color: rgb(134, 134, 134);
+.bc__brand {
+  width: 4rem;
+  /* height: 5rem; */
 }
 
 .bc__product--image {
-  width: 10rem;
+  width: 15rem;
 }
+
+.bc__card--body {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--bc__typography--size--h2);
+  font-weight: var(--bc__typography--weight--300);
+  font-family: var(--bc__typography--family--body);
+  color: var(--bc__color--grey--dark);
+}
+
+
 
 .bc__card--button {
   transform: translate(-50%, 125%);
@@ -306,12 +330,13 @@ ESTAMOS EN DESKTOP FIRST */
   opacity: 1;
 }
 
-/* FOOTER */
+/* --🟨 FOOTER------------------------------------------------------------------------ */
+
 /* diseños generales */
 .bc__section__footer {
   min-height: var(--bc__height--footer);
-  font-size: var(--bc__typography--p);
-  font-weight: var(--bc__weight--300);
+  font-size: var(--bc__typography--size--p);
+  font-weight: var(--bc__typography--weight--300);
   color: var(--bc__color--yellow);
   display: flex;
   flex-direction: column;
@@ -356,7 +381,7 @@ ESTAMOS EN DESKTOP FIRST */
 /* diseño especial texto Kike de Manuel */
 .bc__slogan__boxer {
   text-align: center;
-  font-size: var(--bc__typography--h3);
+  font-size: var(--bc__typography--size--h3);
   -webkit-text-stroke: 0.04rem var(--bc__color--yellow);
   color: transparent;
 }
@@ -379,7 +404,8 @@ ESTAMOS EN DESKTOP FIRST */
   padding: var(--bc__padding--small);
 }
 
-/* WHATSAPP BUTTON */
+/* --🟨 WHATSAPP BUTTON------------------------------------------------------------------------ */
+
 /* diseños generales */
 .bc__button--whatsApp {
   width: 2.5rem;
@@ -410,7 +436,8 @@ ESTAMOS EN DESKTOP FIRST */
   left: 20%;
 }
 
-/* MEDIA QUERIES */
+/* --🟨 MEDIA QUERIES------------------------------------------------------------------------ */
+
 /* MOBILE DISPLAY */
 @media screen and (max-width: 23.5rem) {
   .bc__section__header__layout {
@@ -447,13 +474,13 @@ ESTAMOS EN DESKTOP FIRST */
 
   /* reducir tamaño texto */
   .bc__hero__description {
-    font-size: 3rem;
-    font-weight: var(--bc__weight--500);
+    font-size: calc(var(--bc__typography--size--extra) - 2rem);
+    font-weight: var(--bc__typography--weight--500);
   }
 
   /* reducir tamaño CTA */
   .bc__hero__CTA {
-    font-size: var(--bc__typography--p);
+    font-size: calc(var(--bc__typography--size--h3) - 0.48rem);
   }
 
   /* reducir tamaño next */
@@ -546,8 +573,13 @@ ESTAMOS EN DESKTOP FIRST */
 
   /* reducir tamaño texto */
   .bc__hero__description {
-    font-size: 4rem;
-    font-weight: var(--bc__weight--500);
+    font-size: calc(var(--bc__typography--size--extra) - 1rem);
+    font-weight: var(--bc__typography--weight--500);
+  }
+
+  /* reducir tamaño CTA */
+  .bc__hero__CTA {
+    font-size: calc(var(--bc__typography--size--h3) - 0.24rem);
   }
 
   .bc__hero__next {
