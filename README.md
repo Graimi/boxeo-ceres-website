@@ -1,39 +1,55 @@
 # Ceres-Box-Website
 
-Este proyecto está en desarrollo, a continuación puede ver los pasos de su estado actual a continuación
+## Preguntas
+<ul>
+<li> ¿Subir fotos a cloudinary? </li>
+<li> ¿Dividir los avances en varios repos o uno? </li>
+<li> ¿Quitar efectos de hover en tablet y movil? </li>
+<li> Respecto al <meta name="referrer" content="unsafe-url">, ¿es correcto unsafe-url? </li>
+<li> En el <link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? </li>
+</ul>
+
+## Investigar
+<ul>
+<li>  En el <link rel="canonical" href="#"> Establecer la URL cacnónica </li>
+<li>  Cloudinary </li>
+</ul>
 
 ## Pasos
-
+Este proyecto está en desarrollo, a continuación puede ver los pasos de su estado actual a continuación
 <ol>
 <li> [✅] Crear la carpeta en local y vincular el repo a GitHub </li>
 <li> [✅] Instalar las dependencias de Vite para desplegar posteriormente el proyecto </li>
 <li> [✅] Hacer uso de las herramientas Prettier y ESLint para configurar los estandares de error y formateo </li>
 <li> [] Crear el borrador de la página web completa en Canva <a href="https://www.canva.com/design/DAFae41XcOs/view">link</a> </li>
-<li> [] Crear el esqueleto y maquetación de la landing page de una tienda de boxeo (Home y Tienda) puramente en HTML y CSS (proyecto-1-rockTheCode) </li>
-<li> [] ¿Subir las imágenes a cloudinary? </li>
-<li> [] CSS general </li>
+<br>
+<li> [✅] <u>Proyecto-1-rockTheCode</u> -> Crear el esqueleto y maquetación de la landing page de una tienda de boxeo (Home y Tienda) puramente en HTML y CSS, sin funciones de JavaScript vinculadas </li>
+<li> [✅] CSS general </li>
 [✅] Setear todas las variables y propiedades <br>
 [✅] Estilos navbar en todas las medias queries <br>
-[] Quitar efecto hover al botón de contacto en tablet y móvil <br>
-[] Poner botón de compra fijo en las cards <br>
-<li> [] HTML / head </li>
-[] Desarrollar el head para favorecer la carga óptima de la página <br>
-[] meta name="referrer" content="unsafe-url"> ¿es correcto unsafe-url? <br>
-[] link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? <br>
-[] link rel="canonical" href="#"> Establecer la URL cacnónica
-<li> [] HTML & CSS / body </li>
+[✅] Revisar <br>
+<li> [✅] HTML / head </li>
+[✅] Desarrollar el head para favorecer la carga óptima de la página <br>
+<li> [✅] HTML & CSS / body </li>
+[✅] Crear esqueleto general <br>
+[✅] Header <br>
 [✅] Menú hamburguesa <br>
+[✅] Botón whatsApp <br>
+[✅] Hero <br>
+[✅] Shop <br>
+[✅] Footer <br>
+[✅] Revisar <br>
+<br>
+
+<li> [] <u>Proyecto-2-rockTheCode</u> -> Mejorar el proyecto de tienda de boxeo anterior añadiendo las funcionalidades faltantes con JavaScript y creando el resto de páginas</li>
+[] Identificar los nuevos componentes a añadir <br>
 [] Añadir logo original <br>
-[✅] Contact - Añadir enlace whatsapp y borde
-[✅] Añadir botón whatsApp <br>
-[✅] Crear hero <br>
-[] Crear shop <br>
-[✅] Crear footer <br>
-<li> [] Añadir funcionalidades con JavaScript (proyecto-2-rockTheCode) </li>
 [] Crear invisible nav - Notion/CSS3/DISEÑOS/Invisible nav <br>
+<br>
+
+<li> [] <u>Proyecto personal</u> -> Desarrollar a futuro toda la página web completa como se ha previsto en Canva (gimnasio y no tienda) en React </li>
+[] Identificar los nuevos componentes a añadir <br>
 [] Añadir botón whats oficial <!--<g clip-path="url(#_clipPath_A3g8G5hPEGG2L0B6hFCxamU4cc8rfqzQ)">" -->
 
 https://api.whatsapp.com/send?phone=34605895354&text=Buenas!%20Te%20gustar%C3%ADa%20reservar%20una%20clase%3F%0AMira%20nuestro%20horario%20y%20haz%20tu%20mismo%20una%20propuesta%20de%20fecha%20y%20hora
-
-<li> [] Desarrollar a futuro toda la página web completa como se ha previsto en Canva (gimnasio y no tienda) en React y en otro repositorio (proyecto-personal) </li>
 </ul>
