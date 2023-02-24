@@ -92,9 +92,6 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  text-decoration: var(--bc__style--none);
-  list-style-type: var(--bc__style--none);
-  letter-spacing: var(--bc__typography--spacing--content);
 }
 
 body {
@@ -109,8 +106,26 @@ body {
   -webkit-text-size-adjust: var(--bc__complete);
 }
 
+h1,
+h2,
+h3 {
+  letter-spacing: var(--bc__typography--spacing--content);
+}
+
+p {
+  font-family: var(--bc__typography--family--body);
+}
+
 a {
   color: var(--bc__color--white);
+  text-decoration: var(--bc__style--none);
+  list-style-type: var(--bc__style--none);
+}
+
+ul,
+li {
+  text-decoration: var(--bc__style--none);
+  list-style-type: var(--bc__style--none);
 }
 
 /* ✅0.1.Layout */
