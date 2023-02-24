@@ -26,32 +26,42 @@
   --bc__typography--weight--700: 700;
 
   /* LETTER SPACING */
-  --bc__typography--spacing--content: 0.05rem;  
+  --bc__typography--spacing--content: 0.05rem;
 
-/* GENERAL SIZING */
---bc__empty: 0%;
---bc__half: 50%;
---bc__complete: 100%;
+  /* TEXT STROKE STYLE */
+  --bc__text__stroke--white: 0.04rem var(--bc__color--white);
+  --bc__text__stroke--black: 0.04rem var(--bc__color--black);
+  --bc__text__stroke--yellow: 0.04rem var(--bc__color--yellow);
+
+  /* GENERAL STYLE */
+  --bc__style--none: none;
+
+  /* GENERAL % SIZING */
+  --bc__empty: 0%;
+  --bc__half: 50%;
+  --bc__complete: 100%;
 
   /* MARGIN */
   --bc__margin--small: 0.5rem;
 
   /* GAP */
   --bc__gap--small: 0.7rem;
-  --bc__gap: 1.5rem;
+  --bc__gap--medium: 1.5rem;
   --bc__gap--big: 3rem;
 
   /* PADDING */
   --bc__padding--small: 0.5rem;
-  --bc__padding--btn: 1rem;
-  --bc__padding--section: 1.5rem;
-  --bc__padding--big: 2rem;
-  --bc__padding--shop: 2.5rem 5rem;
+  --bc__padding--medium: 1rem;
+  --bc__padding--big: 1.5rem;
 
   /* BORDER */
   --bc__border--yellow: 0.12rem solid var(--bc__color--yellow);
   --bc__border--black: 0.12rem solid var(--bc__color--black);
   --bc__border--grey: 0.12rem solid var(--bc__color--grey);
+
+  /* BORDER RADIUS */
+  --bc__border__radius--small: 0.5rem;
+  --bc__border__radius--big: 1.5rem;
 
   /* HEIGHT */
   --bc__height--small: 2.5rem;
@@ -70,7 +80,7 @@
 🟨 - Revisar descripciones y variables
 ✅ - Código hecho y revisado
 */
-/* --🟨 GLOBAL STYLES------------------------------------------------------------------------ */
+/* --✅0.GLOBAL STYLES------------------------------------------------------------------------ */
 /* Se establecen los diferentes estilos generales normalmente predefinidos y comunes */
 html {
   box-sizing: border-box;
@@ -82,18 +92,17 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style-type: none;
+  text-decoration: var(--bc__style--none);
+  list-style-type: var(--bc__style--none);
   letter-spacing: var(--bc__typography--spacing--content);
 }
 
 body {
-  color: var(--bc__color--white);
-  font-family: var(--bc__typography--family--body);
-  /* ver que hacer con este width */
   min-width: 20rem;
   min-height: var(--bc__height--full--screen);
   margin: 0 auto;
+  color: var(--bc__color--white);
+  font-family: var(--bc__typography--family--body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -104,7 +113,7 @@ a {
   color: var(--bc__color--white);
 }
 
-/* LAYOUT */
+/* ✅0.1.Layout */
 /* Se dejan predefinidos los siguientes apartados para evitar repetirlos */
 .bc__layout__flex {
   display: flex;
@@ -116,97 +125,87 @@ a {
   align-items: center;
 }
 
-/* --🟨 HEADER------------------------------------------------------------------------ */
+/* --✅1.HEADER------------------------------------------------------------------------ */
 /* Diseños específicos del header */
 .bc__section__header__layout {
   justify-content: space-around;
   text-transform: uppercase;
-  background-color: var(--bc__color--black);
-  min-height: var(--bc__height--header);
-  padding: var(--bc__padding--section);
   font-size: var(--bc__typography--size--h3);
   font-weight: var(--bc__typography--weight--500);
   word-spacing: var(--bc__typography--spacing--content);
+  background-color: var(--bc__color--black);
+  min-height: var(--bc__height--header);
+  padding: var(--bc__padding--big);
 }
 
 /* Diseños para poner el nombre del logo hueco */
 .bc__header__logo {
-  -webkit-text-stroke: 0.04rem var(--bc__color--white);
+  -webkit-text-stroke: var(--bc__text__stroke--white);
   color: var(--bc__color--transparent);
 }
 
 /* Diseños para la navbar en desktop */
 .bc__navbar__header {
   flex-direction: row;
-  gap: var(--bc__gap);
+  gap: var(--bc__gap--medium);
 }
 
 /* Diseño para quitar la hamburguesa, estamos en desktop first */
 .bc__hamburguer__label,
 .bc__hamburguer {
-  display: none;
+  display: var(--bc__style--none);
 }
 
+/* ✅1.1.Contact button */
 /* Diseños específicos para el efecto de la palabra Contacto */
-.bc__navbar__contacto {
-  border: #fffffe solid 1 auto;
-  border-radius: 1rem;
-}
 
-/* CONTACT BUTTON */
-/* === removing default button style ===*/
+/* Dando estilos específicos al botón */
 .bc__contact__button {
-  margin: 0;
-  background: var(--bc__color--transparent);
-  padding: 0;
-  border: none;
-}
-
-/* button styling */
-.bc__contact__button {
-  font-size: var(--bc__typography--size--h3);
   position: relative;
+  font-size: var(--bc__typography--size--h3);
   text-transform: uppercase;
-  /* text-decoration: none; */
+  background: var(--bc__color--transparent);
+  border: var(--bc__style--none);
 }
 
+/* Aplicando por defecto el color blanco */
 .bc__contact__text--plain {
   color: var(--bc__color--white);
 }
 
-/* this is the text, when you hover on button */
+/* Los estilos del texto cuando se realiza el hover */
 .bc__contact__text--hover {
   position: absolute;
   box-sizing: border-box;
   content: attr(data-text);
+  -webkit-text-stroke: var(--bc__text__stroke--yellow);
   color: var(--bc__color--transparent);
   width: var(--bc__empty);
-  inset: 0;
   border-right: 0.2rem double var(--bc__color--yellow);
+  inset: 0;
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
-  -webkit-text-stroke: 0.04rem var(--bc__color--white);
 }
 
-/* Para mover la raya */
+/* HOVER -> Acción para mover la doble raya */
 .bc__contact__button:hover .bc__contact__text--hover {
   width: var(--bc__complete);
 }
 
-/* Para no superponer el color de la primera palabra */
+/* HOVER -> Para no superponer el color anterior */
 .bc__contact__button:hover .bc__contact__text--plain {
   color: var(--bc__color--transparent);
 }
 
-/* --🟨 MAIN------------------------------------------------------------------------ */
+/* --✅2.MAIN------------------------------------------------------------------------ */
 /* Se establece el color de fondo del main */
 .bc__section__main {
   background-color: var(--bc__color--white);
 }
 
-/* 🟨 HERO */
-/* Diseños generales */
+/* ✅2.1.Hero */
+/* Diseños generales, con el z-index conseguimos ocultar el botón whatsApp */
 .bc__section__hero {
   flex-direction: column;
   text-align: center;
@@ -219,86 +218,96 @@ a {
   z-index: 1;
 }
 
+/* Se aplica el filtro para mejorar la visualización */
 .bc__hero__logo {
   width: 10rem;
   filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
 }
 
+/* Estilos específicos del texto principal */
 .bc__hero__description {
-  -webkit-text-stroke: 0.04rem var(--bc__color--white);
-  color: var(--bc__color--white);
-  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
   font-size: var(--bc__typography--size--extra);
   font-weight: var(--bc__typography--weight--500);
+  -webkit-text-stroke: var(--bc__text__stroke--white);
+  color: var(--bc__color--white);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
 }
 
+/* Estilos específicos del CTA */
 .bc__hero__CTA {
-  background-color: var(--bc__color--yellow);
-  color: var(--bc__color--black);
-  padding: var(--bc__padding--btn);
-  border-radius: 0.5rem;
   text-align: center;
   font-size: var(--bc__typography--size--h3);
   word-spacing: var(--bc__typography--spacing--content);
+  background-color: var(--bc__color--yellow);
+  color: var(--bc__color--black);
+  padding: var(--bc__padding--medium);
+  border-radius: var(--bc__border__radius--small);
 }
 
+/* Se aplica el filtro para mejorar la visualización */
 .bc__hero__next {
-  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
   width: var(--bc__width--small);
+  filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
 }
 
-/* 🟨SHOP */
+/* ✅2.2.SHOP */
+/* Estilos generales */
 .bc__section__shop {
   justify-content: space-evenly;
   flex-wrap: wrap;
   min-height: var(--bc__height--full--screen);
-  padding: var(--bc__padding--shop);
+  padding: 2.5rem 5rem;
   gap: var(--bc__gap--big);
 }
 
+/* Espacio aplicado para que solo quepan 3 cards en la pantalla */
 .bc__product {
   flex-basis: 26%;
 }
 
+/* Estilos generales de las cards */
 .bc__product--card {
+  position: relative;
   width: var(--bc__height--card);
   height: 33rem;
-  border-radius: 20px;
+  border-radius: var(--bc__border__radius--big);
   background: var(--bc__color--white--light);
-  position: relative;
-  padding: 1.5rem;
+  padding: var(--bc__padding--big);
   transition: 0.5s ease-out;
   overflow: visible;
 }
 
+/* Estilos generales del contenido de las cards */
 .bc__card--details {
-  color: var(--bc__color--black);
-  height: var(--bc__complete);
-  gap: 0.5em;
   display: grid;
   place-content: center;
   align-content: space-between;
+  color: var(--bc__color--black);
+  height: var(--bc__complete);
+  gap: var(--bc__gap--small);
 }
 
-/*Text*/
+/* Estilos del título */
 .bc__card--title {
   font-size: var(--bc__typography--size--h1);
   font-weight: var(--bc__typography--weight--700);
   font-family: var(--bc__typography--family--heading);
-  -webkit-text-stroke: 0.045rem var(--bc__color--black);
   font-style: italic;
+  -webkit-text-stroke: var(--bc__text__stroke--black);
   color: var(--bc__color--yellow);
 }
 
+/* Estilo del logo de la marca */
 .bc__brand {
-  width: 4rem;
-  /* height: 5rem; */
+  width: 3.5rem;
 }
 
+/* Tamaño de la imagen del producto */
 .bc__product--image {
   width: 15rem;
 }
 
+/* Estilos del precio y peso (oz) */
 .bc__card--body {
   justify-content: space-between;
   font-size: var(--bc__typography--size--h2);
@@ -307,13 +316,13 @@ a {
   color: var(--bc__color--grey--dark);
 }
 
+/* Estilos de base del botón, ocultados hasta hacer hover */
 .bc__card--button {
   transform: translate(-50%, 125%);
   width: 30%;
-  border-radius: 1rem;
-  border: none;
+  border-radius: var(--bc__border__radius--big);
+  border: var(--bc__style--none);
   background-color: var(--bc__color--yellow);
-  color: #fff;
   font-size: 1rem;
   padding: 0.5rem 0.5rem;
   position: absolute;
@@ -323,41 +332,42 @@ a {
   transition: 0.3s ease-out;
 }
 
+/* Tamaño del logo de compra */
 .bc__card--button__image {
   width: var(--bc__width--small);
 }
 
-/*Hover*/
+/* HOVER -> Efecto aplicado al borde del card */
 .bc__product--card:hover {
   border: 0.1rem solid var(--bc__color--yellow);
   box-shadow: 0 0.25rem 1.1rem 0 rgba(0, 0, 0, 0.1);
 }
 
+/* HOVER -> En la card aparece el botón de compra */
 .bc__product--card:hover .bc__card--button {
   transform: translate(-50%, var(--bc__half));
   opacity: 1;
 }
 
-/* --🟨 FOOTER------------------------------------------------------------------------ */
-
-/* diseños generales */
+/* --✅3.FOOTER------------------------------------------------------------------------ */
+/* Estilos generales */
 .bc__section__footer {
-  min-height: var(--bc__height--footer);
-  font-size: var(--bc__typography--size--p);
-  font-weight: var(--bc__typography--weight--300);
-  color: var(--bc__color--yellow);
   flex-direction: column;
   justify-content: center;
   justify-items: center;
+  min-height: var(--bc__height--footer);
+  padding: var(--bc__padding--big);
+  gap: var(--bc__gap--small);
+  font-size: var(--bc__typography--size--p);
+  font-weight: var(--bc__typography--weight--300);
+  color: var(--bc__color--yellow);
   background-image: url(./public/assets/footer.png);
+  background-color: var(--bc__color--white);
   background-size: cover;
   background-position-x: center;
-  padding: var(--bc__padding--section);
-  gap: var(--bc__gap--small);
-  background-color: var(--bc__color--white);
 }
 
-/* diseños info shop */
+/* Estilos específicos sobre la info del gym */
 .bc__footer__web {
   display: grid;
   justify-content: center;
@@ -369,7 +379,7 @@ a {
   border-bottom: var(--bc__color--yellow) 0.1rem solid;
 }
 
-/* diseños individuales grupo dirección, teléfono e instagram */
+/* Estilos individuales de los grupos ubicación, teléfono e instagram */
 .bc__footer__location,
 .bc__contact__phone,
 .bc__contact__instagram {
@@ -377,29 +387,29 @@ a {
   gap: var(--bc__gap--small);
 }
 
-/* orden texto dirección */
+/* Dirección del texto en desktop first */
 .bc__location__address {
   text-align: right;
 }
 
-/* diseño especial texto Kike de Manuel */
+/* Estilo del texto Kike de Manuel */
 .bc__slogan__boxer {
   text-align: center;
   font-size: var(--bc__typography--size--h3);
-  -webkit-text-stroke: 0.04rem var(--bc__color--yellow);
+  -webkit-text-stroke: var(--bc__text__stroke--yellow);
   color: var(--bc__color--transparent);
 }
 
-/* diseño texto del eslogan */
+/* Estilo del eslogan */
 .bc__slogan__text {
   background-color: var(--bc__color--yellow);
   color: var(--bc__color--black);
   padding: var(--bc__padding--small);
-  border-radius: 0.5rem;
+  border-radius: var(--bc__border__radius--small);
   text-align: center;
 }
 
-/* padding a las imágenes del footer */
+/* Padding de los iconos del footer */
 .bc__contact__phone,
 .bc__footer__location,
 .bc__contact__instagram,
@@ -408,29 +418,28 @@ a {
   padding: var(--bc__padding--small);
 }
 
-/* --🟨 WHATSAPP BUTTON------------------------------------------------------------------------ */
-
-/* diseños generales */
+/* --✅4.WHATSAPP BUTTON------------------------------------------------------------------------ */
+/* Diseños generales */
 .bc__button--whatsApp {
+  position: fixed;
+  bottom: 3vh;
+  left: 3vh;
   height: var(--bc__height--small);
   width: var(--bc__width--small);
   background-color: var(--bc__color--green);
   border-radius: var(--bc__half);
-  box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
-  transition: box-shadow 0.2s;
+  box-shadow: 0.03rem 0.03rem 0.4rem rgb(60 60 60 / 40%);
   cursor: pointer;
-  position: fixed;
-  bottom: 3vh;
-  left: 3vh;
+  transition: box-shadow 0.2s;
   transition: all 0.2s;
 }
 
-/* efecto hover */
+/* HOVER -> Efecto aumento */
 .bc__button--whatsApp:hover {
   transform: scale(1.1);
 }
 
-/* imagen de WhatsApp */
+/* Icono de WhatsApp */
 .bc__whatsApp__img {
   position: absolute;
   width: 70%;
@@ -438,64 +447,85 @@ a {
   left: 20%;
 }
 
-/* --🟨 MEDIA QUERIES------------------------------------------------------------------------ */
+/* --🟨5.MEDIA QUERIES------------------------------------------------------------------------ */
 
-/* MOBILE DISPLAY */
-@media screen and (max-width: 23.5rem) {
+/* TABLET DISPLAY */
+@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* Se cambia el display del header para adapatarlo a tablet */
   .bc__section__header__layout {
-    flex-direction: column;
-    gap: var(--bc__gap);
-  }
-
-  .bc__hamburguer__label {
-    display: inline-block;
-  }
-
-  /* POR DEFECTO NAV NONE */
-  .bc__section__navbar {
-    display: none;
-  }
-
-  /* CHECKED -> APARECE NAV */
-  .bc__hamburguer:checked ~ .bc__section__navbar {
     display: block;
+    min-height: 5vh;
   }
 
-  /* COLUMN NAV ITEMS */
+  /* Se centra el texto del logo */
+  .bc__header__logo {
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Se fija "a mano" la posición de la hamburguesa */
+  .bc__hamburguer__label {
+    display: block;
+    position: absolute;
+    top: 1.35rem;
+    right: 3.5rem;
+  }
+
+  /* Por defecto la nav no se ve */
+  .bc__section__navbar {
+    display: var(--bc__style--none);
+  }
+
+  /* CHECKED -> Aparece la nav */
+  .bc__hamburguer:checked + .bc__section__navbar {
+    display: block;
+    padding: var(--bc__padding--big);
+  }
+
+  /* Dirección de los items del nav */
   .bc__navbar__header {
     flex-direction: column;
   }
 
-  /* MAIN */
+  /* --✅2.MAIN------------------------------------------------------------------------ */
 
-  /* HERO */
-  /* reducir tamaño logo */
-  .bc__hero__logo {
-    width: 7rem;
+  /* ✅2.1.HERO */
+  /* Se aumenta tamaño hero para compensar el header más pequeño*/
+  .bc__section__hero {
+    min-height: 91vh;
   }
 
-  /* reducir tamaño texto */
+  /* Se reduce el tamaño del logo */
+  .bc__hero__logo {
+    width: 8rem;
+  }
+
+  /* Se reduce el tamaño del texto */
   .bc__hero__description {
-    font-size: calc(var(--bc__typography--size--extra) - 2rem);
+    font-size: calc(var(--bc__typography--size--extra) - 1rem);
     font-weight: var(--bc__typography--weight--500);
   }
 
-  /* reducir tamaño CTA */
+  /* Se reduce el tamaño del CTA */
   .bc__hero__CTA {
-    font-size: calc(var(--bc__typography--size--h3) - 0.48rem);
+    font-size: calc(var(--bc__typography--size--h3) - 0.25rem);
   }
 
-  /* reducir tamaño next */
+  /* Se reduce el tamaño del icono next */
   .bc__hero__next {
-    width: calc(var(--bc__width--small) - 0.5rem);
+    width: calc(var(--bc__width--small) - 0.25rem);
   }
 
-  /* FOOTER */
+  /* --✅3.FOOTER------------------------------------------------------------------------ */
+  /* Se cambia el display del footer para adapatarlo a tablet */
   .bc__footer__web {
-    margin: var(--bc__margin--small);
     display: flex;
     flex-direction: column;
+    margin: var(--bc__margin--small);
   }
+
+  /* Estilos específicos de los grupos del footer */
 
   .bc__footer__location {
     flex-direction: column-reverse;
@@ -504,10 +534,15 @@ a {
     margin-top: var(--bc__margin--small);
   }
 
+  .bc__footer__contact {
+    display: flex;
+  }
+
   .bc__location__address {
     text-align: center;
   }
 
+  /* Se establece el order para que prevalezca en la parte superior el eslogan */
   .bc__footer__slogan {
     order: 0;
   }
@@ -523,76 +558,68 @@ a {
   }
 }
 
-/* TABLET DISPLAY */
-@media screen and (min-width: 23.5rem) and (max-width: 48rem) {
+/* MOBILE DISPLAY */
+@media screen and (max-width: 23.5rem) {
+  /* --✅1.HEADER------------------------------------------------------------------------ */
+  /* Se cambia la dirección del header para adapatarlo a movil */
   .bc__section__header__layout {
-    display: block;
-    min-height: 5vh;
+    flex-direction: column;
+    gap: var(--bc__gap--medium);
   }
 
-  .bc__header__logo {
-    margin: auto;
-    text-align: center;
-  }
-
+  /* Se fija la posición de la hamburguesa */
   .bc__hamburguer__label {
-    display: block;
-    position: absolute;
-    top: 1.35rem;
-    right: 3.5rem;
+    display: inline-block;
   }
 
-  /* POR DEFECTO NAV NONE */
+  /* Por defecto la nav no se ve */
   .bc__section__navbar {
-    display: none;
+    display: var(--bc__style--none);
   }
 
-  /* CHECKED -> APARECE NAV */
-  .bc__hamburguer:checked + .bc__section__navbar {
+  /* CHECKED -> Aparece la nav */
+  .bc__hamburguer:checked ~ .bc__section__navbar {
     display: block;
-    padding: var(--bc__padding--section);
   }
 
-  /* COLUMN NAV ITEMS */
+  /* Dirección de los items del nav */
   .bc__navbar__header {
     flex-direction: column;
   }
 
-  /* MAIN */
+  /* --✅2.MAIN------------------------------------------------------------------------ */
 
-  /* HERO */
-  /* aumentar tamaño hero para compensar el header */
-  .bc__section__hero {
-    min-height: 91vh;
-  }
-
-  /* reducir tamaño logo */
+  /* ✅2.1.HERO */
+  /* Se reduce el tamaño del logo */
   .bc__hero__logo {
-    width: 8rem;
+    width: 7rem;
   }
 
-  /* reducir tamaño texto */
+  /* Se reduce el tamaño del texto */
   .bc__hero__description {
-    font-size: calc(var(--bc__typography--size--extra) - 1rem);
+    font-size: calc(var(--bc__typography--size--extra) - 2rem);
     font-weight: var(--bc__typography--weight--500);
   }
 
-  /* reducir tamaño CTA */
+  /* Se reduce el tamaño del CTA */
   .bc__hero__CTA {
-    font-size: calc(var(--bc__typography--size--h3) - 0.24rem);
+    font-size: calc(var(--bc__typography--size--h3) - 0.48rem);
   }
 
-    /* reducir tamaño icono next */
+  /* Se reduce el tamaño del next */
   .bc__hero__next {
-    width: calc(var(--bc__width--small) - 0.25rem);
+    width: calc(var(--bc__width--small) - 0.5rem);
   }
 
-  /* FOOTER */
+  /* --✅3.FOOTER------------------------------------------------------------------------ */
+  /* Se cambia el display del footer para adapatarlo a movil */
   .bc__footer__web {
-    margin: var(--bc__margin--small);
     display: flex;
     flex-direction: column;
+    margin: var(--bc__margin--small);
   }
+
+  /* Estilos específicos de los grupos del footer */
 
   .bc__footer__location {
     flex-direction: column-reverse;
@@ -601,14 +628,11 @@ a {
     margin-top: var(--bc__margin--small);
   }
 
-  .bc__footer__contact {
-    display: flex;
-  }
-
   .bc__location__address {
     text-align: center;
   }
 
+  /* Se establece el order para que prevalezca en la parte superior el eslogan */
   .bc__footer__slogan {
     order: 0;
   }
