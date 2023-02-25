@@ -277,6 +277,8 @@ li {
 
 /* Espacio aplicado para que solo quepan 3 cards en la pantalla */
 .bc__product {
+  display: flex;
+  justify-content: center;
   flex-basis: 26%;
 }
 
