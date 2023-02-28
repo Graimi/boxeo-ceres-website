@@ -19,7 +19,7 @@ No se si esta práctica es lo habitual o el problema viene de que tenía que hab
 
 ## A solventar
 <ul>
-<li> [] Todo elemento clickable es recomendable que tenga un cursor: pointer; ya que esto da feedback al usuario de que es un elemento que se puede clickar </li>
+<li> [✅] Todo elemento clickable es recomendable que tenga un cursor: pointer; ya que esto da feedback al usuario de que es un elemento que se puede clickar </li>
 <li> [] No hace falta que pongas el role en los elementos a ya que su rol es link por defecto cuando tiene el atributo href </li>
 <li> [] Intenta no utilizar <br/>  para los saltos de línea, puedes utilizar la propiedad max-width de css para limitar el tamaño de los elementos en bloque y que su contenido caiga a la siguiente línea </li>
 <li> [] El atributo alt en las imágenes  debe contener una descripción lo más clara posible sobre la imagen.</li>
@@ -57,8 +57,12 @@ Este proyecto está en desarrollo, a continuación puede ver los pasos de su est
 
 <li> [] <u>Proyecto-2-rockTheCode</u> -> Mejorar el proyecto de tienda de boxeo anterior añadiendo las funcionalidades faltantes con JavaScript y creando el resto de páginas</li>
 [] Identificar los nuevos componentes a añadir <br>
+[] Usar fuente collegue block 2 (descargada) <br>
 [] Añadir logo original <br>
 [] Crear invisible nav - Notion/CSS3/DISEÑOS/Invisible nav <br>
+[] nav fija en parte superior <br>
+[] Header nombre gym con enlace al inicio de la web <br>
+[] editar la scrollbar de la página (Ver ChatGPT) <br>
 <br>
 
 <li> [] <u>Proyecto personal</u> -> Desarrollar a futuro toda la página web completa como se ha previsto en Canva (gimnasio y no tienda) en React </li>

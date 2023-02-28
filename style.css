@@ -120,6 +120,7 @@ a {
   color: var(--bc__color--white);
   text-decoration: var(--bc__style--none);
   list-style-type: var(--bc__style--none);
+  cursor: pointer;
 }
 
 ul,
@@ -302,6 +303,7 @@ li {
   color: var(--bc__color--black);
   height: var(--bc__complete);
   gap: var(--bc__gap--small);
+  cursor: pointer;
 }
 
 /* Estilos del título */
@@ -312,6 +314,7 @@ li {
   font-style: italic;
   -webkit-text-stroke: var(--bc__text__stroke--black);
   color: var(--bc__color--yellow);
+  cursor: pointer;
 }
 
 /* Estilo del logo de la marca */
@@ -331,6 +334,12 @@ li {
   font-weight: var(--bc__typography--weight--300);
   font-family: var(--bc__typography--family--body);
   color: var(--bc__color--grey--dark);
+  cursor: pointer;
+}
+
+/* Para que el pointer aparezca sobre el contenido de la carta el cual contiene el hipervínculo */
+.bc__card--body > p {
+  cursor: pointer;
 }
 
 /* Estilos de base del botón, ocultados hasta hacer hover */
