@@ -247,7 +247,7 @@ li {
   -webkit-text-stroke: var(--bc__text__stroke--white);
   color: var(--bc__color--white);
   filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
-  max-width: 75%
+  max-width: 90%
 }
 
 /* Estilos específicos del CTA */
@@ -532,7 +532,6 @@ li {
   .bc__hero__description {
     font-size: calc(var(--bc__typography--size--extra) - 1rem);
     font-weight: var(--bc__typography--weight--500);
-    max-width: 90%;
   }
 
   /* Se reduce el tamaño del CTA */
@@ -627,7 +626,6 @@ li {
   .bc__hero__description {
     font-size: calc(var(--bc__typography--size--extra) - 2rem);
     font-weight: var(--bc__typography--weight--500);
-    /* max-width: 90%; */
   }
 
   /* Se reduce el tamaño del CTA */
