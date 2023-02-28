@@ -20,8 +20,8 @@ No se si esta práctica es lo habitual o el problema viene de que tenía que hab
 ## A solventar
 <ul>
 <li> [✅] Todo elemento clickable es recomendable que tenga un cursor: pointer; ya que esto da feedback al usuario de que es un elemento que se puede clickar </li>
-<li> [] No hace falta que pongas el role en los elementos a ya que su rol es link por defecto cuando tiene el atributo href </li>
-<li> [] Intenta no utilizar <br/>  para los saltos de línea, puedes utilizar la propiedad max-width de css para limitar el tamaño de los elementos en bloque y que su contenido caiga a la siguiente línea </li>
+<li> [✅] No hace falta que pongas el role en los elementos a ya que su rol es link por defecto cuando tiene el atributo href </li>
+<li> [✅] Intenta no utilizar <br/>  para los saltos de línea, puedes utilizar la propiedad max-width de css para limitar el tamaño de los elementos en bloque y que su contenido caiga a la siguiente línea </li>
 <li> [] El atributo alt en las imágenes  debe contener una descripción lo más clara posible sobre la imagen.</li>
 <li> [] Si, es recomendable que subas las fotos a Cloudinary </li>
 <li> [] Cada proyecto en su propio repositorio </li>
