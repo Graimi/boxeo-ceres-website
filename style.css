@@ -67,7 +67,7 @@
   --bc__height--small: 2.5rem;
   --bc__height--card: 18rem;
   --bc__height--header: 12vh;
-  --bc__height--footer: 23vh;
+  --bc__height--footer: 35vh;
   --bc__height--hero: 88vh;
   --bc__height--full--screen: 100vh;
 
@@ -226,7 +226,7 @@ li {
   flex-direction: column;
   text-align: center;
   justify-content: space-evenly;
-  background-image: url(./public/assets/ring.jpg);
+  background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605857/ceres-box/ring_bfgytd.jpg);
   background-size: cover;
   min-height: var(--bc__height--hero);
   padding: var(--bc__padding--big);
@@ -247,7 +247,7 @@ li {
   -webkit-text-stroke: var(--bc__text__stroke--white);
   color: var(--bc__color--white);
   filter: drop-shadow(0 0 0.5rem var(--bc__color--yellow));
-  max-width: 90%
+  max-width: 90%;
 }
 
 /* Estilos específicos del CTA */
@@ -388,7 +388,7 @@ li {
   font-size: var(--bc__typography--size--p);
   font-weight: var(--bc__typography--weight--300);
   color: var(--bc__color--yellow);
-  background-image: url(./public/assets/footer.png);
+  background-image: url(https://res.cloudinary.com/dwsffp1eq/image/upload/v1677605856/ceres-box/footer_zwwxpn.png);
   background-color: var(--bc__color--white);
   background-size: cover;
   background-position-x: center;

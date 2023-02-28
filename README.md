@@ -23,10 +23,10 @@ No se si esta práctica es lo habitual o el problema viene de que tenía que hab
 <li> [✅] No hace falta que pongas el role en los elementos a ya que su rol es link por defecto cuando tiene el atributo href </li>
 <li> [✅] Intenta no utilizar <br/> para los saltos de línea, puedes utilizar la propiedad max-width de css para limitar el tamaño de los elementos en bloque y que su contenido caiga a la siguiente línea </li>
 <li> [✅] El atributo alt en las imágenes debe contener una descripción lo más clara posible sobre la imagen.</li>
-<li> [] Si, es recomendable que subas las fotos a Cloudinary </li>
+<li> [✅] Si, es recomendable que subas las fotos a Cloudinary </li>
 <li> [] Cada proyecto en su propio repositorio </li>
-<li> [] En dispositivos moviles no existe el hover, aun así no hace falta que los quites simplemente no se visualizan </li>
-<li> [] En el <link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? No creo que aporte mucho añadirlo pero si quieres puedes hacerlo tampoco perjudicará en nada si lo añades</li>
+<li> En dispositivos moviles no existe el hover, aun así no hace falta que los quites simplemente no se visualizan </li>
+<li> [✅] En el <link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? No creo que aporte mucho añadirlo pero si quieres puedes hacerlo tampoco perjudicará en nada si lo añades</li>
 </ul>
 
 ## Pasos
@@ -58,7 +58,7 @@ Este proyecto está en desarrollo, a continuación puede ver los pasos de su est
 <li> [] <u>Proyecto-2-rockTheCode</u> -> Mejorar el proyecto de tienda de boxeo anterior añadiendo las funcionalidades faltantes con JavaScript y creando el resto de páginas</li>
 [] Identificar los nuevos componentes a añadir <br>
 [] Usar fuente collegue block 2 (descargada) <br>
-[] Añadir logo original <br>
+[✅] Añadir logo original <br>
 [] Crear invisible nav - Notion/CSS3/DISEÑOS/Invisible nav <br>
 [] nav fija en parte superior <br>
 [] Header nombre gym con enlace al inicio de la web <br>
@@ -66,6 +66,7 @@ Este proyecto está en desarrollo, a continuación puede ver los pasos de su est
 <br>
 
 <li> [] <u>Proyecto personal</u> -> Desarrollar a futuro toda la página web completa como se ha previsto en Canva (gimnasio y no tienda) en React </li>
+[] En el <link rel="canonical" href="#"> Establecer la URL cacnónica <br>
 [] Identificar los nuevos componentes a añadir <br>
 [] Añadir botón whats oficial <!--<g clip-path="url(#_clipPath_A3g8G5hPEGG2L0B6hFCxamU4cc8rfqzQ)">" -->
 
