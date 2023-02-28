@@ -7,7 +7,7 @@
 <li> ¿Quitar efectos de hover en tablet y movil? </li>
 <li> Respecto al <meta name="referrer" content="unsafe-url">, ¿es correcto unsafe-url? </li>
 <li> En el <link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? </li>
-<li> [] He utilizado la fuente relativa rem para hacer escalable la tipografía, pero cuando visualizo la web en versión tablet o móvil, la fuente prácticamente no se reducía y he tenido que hacerlo manualmente en las medias queries.
+<li> He utilizado la fuente relativa rem para hacer escalable la tipografía, pero cuando visualizo la web en versión tablet o móvil, la fuente prácticamente no se reducía y he tenido que hacerlo manualmente en las medias queries.
 No se si esta práctica es lo habitual o el problema viene de que tenía que haber usado em o px en su defecto</li>
 </ul>
 
@@ -24,7 +24,7 @@ No se si esta práctica es lo habitual o el problema viene de que tenía que hab
 <li> [✅] Intenta no utilizar <br/> para los saltos de línea, puedes utilizar la propiedad max-width de css para limitar el tamaño de los elementos en bloque y que su contenido caiga a la siguiente línea </li>
 <li> [✅] El atributo alt en las imágenes debe contener una descripción lo más clara posible sobre la imagen.</li>
 <li> [✅] Si, es recomendable que subas las fotos a Cloudinary </li>
-<li> [] Cada proyecto en su propio repositorio </li>
+<li> [✅] Cada proyecto en su propio repositorio </li>
 <li> En dispositivos moviles no existe el hover, aun así no hace falta que los quites simplemente no se visualizan </li>
 <li> [✅] En el <link rel="me" href="#"> ¿añadir algún enlace a Linkedin o github? No creo que aporte mucho añadirlo pero si quieres puedes hacerlo tampoco perjudicará en nada si lo añades</li>
 </ul>
