@@ -1,6 +1,7 @@
-# Ceres-Box-Website
+# Norba-Box-Website
 
 ## PROYECTO FINALIZADO, CONTINUACIÓN DEL MISMO EN <a href="https://github.com/Graimi/proyecto-2-tienda-dinamica">PROYECTO 2 TIENDA DINÁMICA</a>
+## <a href="https://sparkling-tarsier-bd1f1a.netlify.app/">ENLACE</a> DE VISUALIZACIÓN
 
 <br>
 

@@ -236,7 +236,7 @@ li {
 
 /* Se aplica el filtro para mejorar la visualización */
 .bc__hero__logo {
-  width: 10rem;
+  width: 15rem;
   filter: drop-shadow(0 0 0.5rem var(--bc__color--black));
 }
 
